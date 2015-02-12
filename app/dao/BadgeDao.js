@@ -43,8 +43,17 @@ module.exports.update=function(id,intitule,moyenne,url,cb){
 
     Badge.findByIdAndUpdate(id, {name:intitule,moyenne:moyenne,image_url:url}, function (err, post) {
         if (err) return next(err);
-       // res.json(post);
-       else   cb(true);
+        // res.json(post);
+        else   cb(true);
+    });
+
+}
+module.exports.update=function(id,data,cb){
+
+    Badge.findByIdAndUpdate(id, data, function (err, post) {
+        if (err) return next(err);
+        // res.json(post);
+        else   cb(true);
     });
 
 }
