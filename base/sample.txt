@@ -1,0 +1,10 @@
+use  pictura;
+db.createCollection('theme');
+//insertion  example  table
+db.categorie.insert({_id:"zzz",  parent:{nom:"njara",prenom:"eee"}
+
+db.persone.insert({  nom:"njara",  idtype:1})
+db.type.insert({id:1,type:"aaaa"})
+})
+//  find  parent  nom
+db.categorie.findOne({_id:"zzz"}).parent
