@@ -18,7 +18,7 @@ module.exports = function(app) {
             res.render('pages/chat', {movies: movies});
 
         });*/
-        res.render('login');
+        res.render('frontend/pages/accueil');
         /*var  re;
         badgeDao.findAll(function(cb){
                 console.dir(cb);
