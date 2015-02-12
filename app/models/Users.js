@@ -11,7 +11,7 @@ var User = new Schema({
     pseudo: String,
     email: String,
     image_url: String,
-    badge:[BadgeType]
+    badge_id:{type: mongoose.Schema.Types.ObjectId, ref: 'Badge'}
 
 })
 
