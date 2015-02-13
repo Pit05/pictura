@@ -3,7 +3,9 @@
  */
 var  UsersDao=require('../../dao/UsersDao');
 var  PhotosDao=require('../../dao/PhotosDao');
+var  commentaireDao=require('../../dao/CommentaireDao');
 var  voteDao=require('../../dao/VoteDao');
+var commentaire=require('../../models/Commentaires');
 ObjectID = require('mongodb').ObjectID;
 var objectId = new ObjectID();
 module.exports = function(app) {
@@ -36,38 +38,19 @@ module.exports = function(app) {
 
         })
     });
-    app.post('/Login/Membre', function (req, res) {
+    app.get('/Photo/Detail/:id', function (req, res) {
         var data={
-            email:"njaraliantsoa@gmail.com",
-            mdp:"azerty"
+            photos_id:"54e4c519edf460b009622a20"
+            //user_id:"54e4c519edf460b009622a20"
         }
-        userDao.testLoginMembre(data,function(cb){
-
-            if(!cb)
-                console.dir("Email ou mot de passe incorrect");
-            else {
-                console.dir(cb);
-                req.session.user=cb;
-                delete  req.session.user.mdp
-                req.session.user=cb;
-            }
-            //res.redirect('/Home');!
-        })
-
-    });
-    app.post('/Inscription/Membre', function (req, res) {
-        var data={
-            _id:objectId,
-            pseudo:"test",
-            email:"test@gmail.fr",
-            image_url:"frontend/img/upload/image_0000",
-            mdp:"azerty",
-            badge_id:"54d7867573a8651b8969649c"
-        }
-        userDao.save(data,function(cb){
-            if(cb==false)
-                console.dir("Sauvegarde impossible");
+        commentaireDao.findAll(data,function(err,cb1){
+            if(err) return console.error( err);
+                 console.dir(cb1);
         });
-        // res.redirect('/Home');
+
+        /*PhotosDao.findImage({},function(cb){
+            console.dir(cb);
+        })*/
     });
+
 }

@@ -40,8 +40,7 @@ module.exports = function(app) {
             badge_id:"54d7867573a8651b8969649c"
         }
         userDao.save(data,function(cb){
-                if(cb==false)
-                    console.dir("Sauvegarde impossible");
+                console.dir(cb);
         });
 
        // res.redirect('/Home');

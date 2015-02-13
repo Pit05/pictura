@@ -57,8 +57,9 @@ module.exports.findById=function(id,cb){
 
 }
 module.exports.save=function(data,cb){
-
+    //console.dir(data);
     new  Users(data).save(function(err, site) {
+        console.dir(site);
         if(err)  console.error(err);
         else  cb(true);
 

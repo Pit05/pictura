@@ -123,8 +123,14 @@ db.createCollection("Photos",{autoIndexId:true});
       "theme_id":"54ddd132e438abc33d8cfca4"
   }
  );
-db.createCollection("Trophee",{autoIndexId:true});
+db.createCollection("Commentaires",{autoIndexId:true});
+        db.Commentaires.insert(
+        {   "user_id":"54e2c53fc7f66d935365da70",
+            "photos_id":"54e1fae4712ad4d4f7f9e1bc",
+            "commentaire":"Tiko be ny sarinao","date":new Date('2015-02-12')
 
+        }
+        );
 
  );
 

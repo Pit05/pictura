@@ -126,7 +126,7 @@ module.exports = function(app) {
 
 
         });*/
-        VoteDao.findAll({},function(cb){
+       VoteDao.findAll({},function(cb){
                 console.dir(cb);
         });
         res.render('pages/chat');
