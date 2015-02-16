@@ -44,4 +44,10 @@ db.createCollection("Badge",{autoIndexId:true});
 db.Badge.insert(
     {"name":"amateur", "moyenne":50,"image_url":""}
     );
-
+db.createCollection("User",{autoIndexId:true});
+db.User.insert(
+{"pseudo":"Njara","email":"njaraliantsoa@gmail.com","image_url":"",
+    "mdp":"azerty",
+  "badge": {"name":"amateur", "moyenne":50,"image_url":""}
+    }
+);

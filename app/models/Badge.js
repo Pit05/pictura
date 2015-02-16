@@ -12,4 +12,5 @@ var Badge = new Schema({
     moyenne : Number,
     image_url:String
 });
+module.exports.Badge=Badge;
 module.exports=mongoose.model('Badge', Badge,'Badge');
