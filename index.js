@@ -7,7 +7,7 @@ var io = require('socket.io')(http);
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
-//var database = require('./config/database'); // mongoose for mongodb
+var database = require('./config/database'); // mongoose for mongodb
 var port  	 = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
@@ -29,7 +29,7 @@ db.on('error', console.error);
 db.once('open', function() {
     // Create your schemas and models here.
 });
-//mongoose.connect(database.url);
+mongoose.connect(database.url);
 app.use(express.static(__dirname + '/public'));
 
 
@@ -37,6 +37,7 @@ require('./app/HomeRouter.js')(app);
 require('./app/controllers/LoginRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);
+require('./app/controllers/backEnd/ThemeRouter.js')(app);
 //require('./app/controllers/BadgeRouter.js')(app);
 
 io.on('connection', function(socket){

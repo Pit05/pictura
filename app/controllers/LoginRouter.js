@@ -2,6 +2,7 @@
  * Created by Njara on 09/02/2015.
  */
 var mongoose = require('mongoose');
+
 module.exports = function(app) {
     app.post('/admin/login', function (req, res) {
         /* var  thor=new  UserCollection({username:"rrrrrr"});
@@ -12,7 +13,9 @@ module.exports = function(app) {
          res.render('pages/chat', {movies: movies});
 
          });*/
+
         res.render('backEnd/pages/home');
+
         /*var  re;
          badgeDao.findAll(function(cb){
          console.dir(cb);

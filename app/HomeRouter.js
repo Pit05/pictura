@@ -4,9 +4,12 @@
 
 var  UserCollection=require('./models/UserCollection');
 var  badgeDao=require('./dao/BadgeDao');
+var  TypeThemeDao=require('./dao/TypeThemeDao');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var  express=require('express');
+
+
 module.exports = function(app) {
 
     app.get('/', function (req, res) {
@@ -18,7 +21,14 @@ module.exports = function(app) {
             res.render('pages/chat', {movies: movies});
 
         });*/
-        res.render('frontend/pages/accueil');
+
+       /* TypeThemeDao.findAll(function(cb){
+               // console.dir(cb);
+
+                // res.render('backEnd/pages/badgeView',{listeBadge:cb});
+            }
+        );*/
+       res.render('frontend/pages/accueil');
         /*var  re;
         badgeDao.findAll(function(cb){
                 console.dir(cb);
