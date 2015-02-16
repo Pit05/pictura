@@ -4,15 +4,33 @@
 
 var  UserCollection=require('./models/UserCollection');
 var  badgeDao=require('./dao/BadgeDao');
-var  TypeThemeDao=require('./dao/TypeThemeDao');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var  express=require('express');
-
-
 module.exports = function(app) {
 
     app.get('/', function (req, res) {
+        /* var  thor=new  UserCollection({username:"rrrrrr"});
+         //   res.send('exemple/54d0afe1090352502727cf22',thor);
+         UserCollection.find(function(err, movies) {
+         if (err) return console.error(err);
+         console.dir(movies);
+         res.render('pages/chat', {movies: movies});
+
+         });*/
+        res.render('frontend/pages/accueil');
+        /*var  re;
+         badgeDao.findAll(function(cb){
+         console.dir(cb);
+         }
+         );*/
+        //require('./controllers/BadgeRouter.js')(app);
+
+
+
+
+    });
+    app.get('/register', function (req, res) {
        /* var  thor=new  UserCollection({username:"rrrrrr"});
      //   res.send('exemple/54d0afe1090352502727cf22',thor);
         UserCollection.find(function(err, movies) {
@@ -21,14 +39,7 @@ module.exports = function(app) {
             res.render('pages/chat', {movies: movies});
 
         });*/
-
-       /* TypeThemeDao.findAll(function(cb){
-               // console.dir(cb);
-
-                // res.render('backEnd/pages/badgeView',{listeBadge:cb});
-            }
-        );*/
-       res.render('frontend/pages/accueil');
+        res.render('frontend/pages/register');
         /*var  re;
         badgeDao.findAll(function(cb){
                 console.dir(cb);

@@ -1,6 +1,6 @@
-<script type='text/javascript' src='../frontend/js/editor.js'></script>
-<script type='text/javascript' src='../frontend/js/underscore.min.js'></script>
-<script type='text/javascript' src='../frontend/js/backbone.min.js'></script>
+<script type='text/javascript' src='js/editor.js'></script>
+<script type='text/javascript' src='js/underscore.min.js'></script>
+<script type='text/javascript' src='js/backbone.min.js'></script>
 
 <script type='text/javascript'>
     /* <![CDATA[ */
@@ -15,9 +15,9 @@
     /* ]]> */
 </script>
 
-<script type='text/javascript' src='../frontend/js/rtMedia.backbone.js'></script>
-<script type='text/javascript' src='../frontend/js/comment-reply.min.js'></script>
-<script type='text/javascript' src='../frontend/js/jquery.form.min.js'></script>
+<script type='text/javascript' src='js/rtMedia.backbone.js'></script>
+<script type='text/javascript' src='js/comment-reply.min.js'></script>
+<script type='text/javascript' src='js/jquery.form.min.js'></script>
 <script type='text/javascript'>
 
     /* <![CDATA[ */
@@ -25,7 +25,7 @@
     /* ]]> */
 </script>
 
-<script type='text/javascript' src='../frontend/js/contact-form-7/scripts.js'></script>
+<script type='text/javascript' src='js/contact-form-7/scripts.js'></script>
 <!-- ASORINA -->
 <!-- <script type='text/javascript' src='../wp-content/plugins/k-style-switcher/assets/js/k-switcher5152.js?ver=1.0'></script> -->
 <!-- ASORINA -->
@@ -67,19 +67,19 @@
 <!-- ASORINA
 <script type='text/javascript' src='../wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl5152.js?ver=1.0'></script>
     ASORINA -->
-<script type='text/javascript' src='../frontend/js/bootstrap.min.js'></script>
-<script type='text/javascript' src='../frontend/js/lib/waypoints.min.js'></script>
-<script type='text/javascript' src='../frontend/js/plugins/magnific-popup/magnific.min.js'></script>
-<script type='text/javascript' src='../frontend/js/plugins/carouFredSel/jquery.carouFredSel-6.2.0-pack.js'></script>
-<script type='text/javascript' src='../frontend/js/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js'></script>
-<script type='text/javascript' src='../frontend/js/lib/isotope.pkgd.min.js'></script>
-<script type='text/javascript' src='../frontend/js/scripts.js'></script>
-<script type='text/javascript' src='../frontend/js/shortcodes.min.js'></script>
+<script type='text/javascript' src='js/bootstrap.min.js'></script>
+<script type='text/javascript' src='js/lib/waypoints.min.js'></script>
+<script type='text/javascript' src='js/plugins/magnific-popup/magnific.min.js'></script>
+<script type='text/javascript' src='js/plugins/carouFredSel/jquery.carouFredSel-6.2.0-pack.js'></script>
+<script type='text/javascript' src='js/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js'></script>
+<script type='text/javascript' src='js/lib/isotope.pkgd.min.js'></script>
+<script type='text/javascript' src='js/scripts.js'></script>
+<script type='text/javascript' src='js/shortcodes.min.js'></script>
 
 <script type='text/javascript'>
     /* <![CDATA[ */
     var kleoFramework = {"ajaxurl":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-admin\/admin-ajax.php","themeUrl":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/themes\/kleo","goTop":"1","ajaxSearch":"1","alreadyLiked":"You already like this","logo":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/themes\/kleo\/assets\/img\/logo_black_teal.png","retinaLogo":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/uploads\/2014\/08\/logo_white_teal@2x.png","headerHeight":"88","loadingmessage":"<i class=\"icon icon-spin5 animate-spin\"><\/i> Sending info, please wait...","bpNotificationsRefresh":"0"};
     /* ]]> */
 </script>
-<script type='text/javascript' src='../frontend/js/app.min.js'></script>
-<!--<script type='text/javascript' src='../frontend/js/lib/jquery.touchSwipe.min.js'></script>-->
+<script type='text/javascript' src='js/app.min.js'></script>
+<script type='text/javascript' src='js/lib/jquery.touchSwipe.min.js'></script>

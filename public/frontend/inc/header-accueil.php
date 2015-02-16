@@ -20,14 +20,14 @@
 
                     <div class="kleo-mobile-icons">
 
-                        <a class="cart-contents mheader" href="http://seventhqueen.com/themes/kleo/cart/" title="View Cart"><span class="cart-items"><i class="icon icon-basket-full-alt"></i> </span></a>
+                        <a class="cart-contents mheader" href="http://seventhqueen.com/themes/kleo/cart/" title="View Cart"><span class="cart-items"><i class="icon icon-basket-full-alt"></i> </a>
                     </div>
 
                     <strong class="logo">
                         <a href="#">
 
 
-                            <img id="logo_img" title="Kleo Template" src="frontend/img/logo_white_teal.png" alt="">
+                            <img id="logo_img" title="Kleo Template" src="img/logo_white_teal.png" alt="">
 
 
                         </a>
@@ -148,7 +148,7 @@
                                 <li id="menu-item-4512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4512"></li>
                                 <li id="menu-item-4502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4502"></li>
                                 <li id="menu-item-4529" class="kleo-show-login menu-item menu-item-type-custom menu-item-object-custom menu-item-4529"><a title="Login" href="http://seventhqueen.com/themes/kleo/wp-login.php">Login</a></li>
-                                <li id="menu-item-4531" class="kleo-menu kleo-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-4531"><a title="Register" href="/register">Register</a></li>
+                                <li id="menu-item-4531" class="kleo-menu kleo-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-4531"><a title="Register" href="http://seventhqueen.com/themes/kleo/wp-login.php?action=register">Register</a></li>
                             </ul>
                         </li>
                         <!--begin if connected-->
