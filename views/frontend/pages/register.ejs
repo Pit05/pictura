@@ -252,7 +252,7 @@
 
                                             <div class="page" id="register-page">
 
-                                                <form action="#" name="signup_form" id="signup_form" class="standard-form" method="post" enctype="multipart/form-data">
+                                                <form action="/Inscription/Membre" name="signup_form" onsubmit="return submitpasse()" id="signup_form" class="standard-form" method="post" enctype="multipart/form-data">
 
 
 
@@ -268,127 +268,26 @@
                                                             <div class="register-section" id="basic-details-section">
 
 
-                                                                <h4>Account Details</h4>
+                                                                <h4>Details Compte</h4>
 
-                                                                <label for="signup_username">Username (required)</label>
-                                                                <input type="text" name="signup_username" id="signup_username" value="" />
+                                                                <label for="signup_username">Pseudo (Obligatoire)</label>
+                                                                <input type="text" name="pseudo" id="signup_username" value="" required/>
 
-                                                                <label for="signup_email">Email Address (required)</label>
-                                                                <input type="text" name="signup_email" id="signup_email" value="" />
+                                                                <label for="signup_email">Address Email (Obligatoire)</label>
+                                                                <input type="text" name="email" id="signup_email" value="" required/>
 
-                                                                <label for="signup_password">Choose a Password (required)</label>
-                                                                <input type="password" name="signup_password" id="signup_password" value="" class="password-entry" />
+                                                                <label for="signup_password">Mot de passe (Obligatoire)</label>
+                                                                <input type="password" name="password" id="signup_password" value="" class="password-entry" required/>
                                                                 <div id="pass-strength-result"></div>
 
-                                                                <label for="signup_password_confirm">Confirm Password (required)</label>
-                                                                <input type="password" name="signup_password_confirm" id="signup_password_confirm" value="" class="password-entry-confirm" />
+                                                                <label for="signup_password_confirm">Confirm Mot de passe (Obligatoire)</label>
+                                                                <input type="password" name="password_confirm" id="signup_password_confirm" value="" class="password-entry-confirm" required/>
 
 
                                                             </div><!-- #basic-details-section -->
 
                                                             <![if !IE]><input autocomplete="off" type="hidden" id="jGJlDlS" name="signup_8b409af6ea" value="" /><![endif]><![if !IE]><div style="visibility:hidden!important; display:none!important; position:absolute; top:-16945px;"><label for="df05282223">woFiJd</label><br/><input autocomplete="off" tabindex="67342" type="text" id="VorAHMAkNQ" name="df05282223" value="" /></div><![endif]><![if !IE]><style type="text/css">.JiuiiiHUB {visibility:hidden!important; display:none!important;}</style><div class="JiuiiiHUB"><input autocomplete="off" type="text" value="" id="mKrbLWcBoQ" name="604b6e47e7" /></div><![endif]><![if !IE]><style type="text/css">.uisxzQ {visibility:hidden!important; display:none!important;}</style><div class="uisxzQ"><input autocomplete="off" type="text" id="nxwyoNfEs" name="newsignup_de5881dc19" value="" /></div><![endif]>				</div>
-                                                        <div class="col-sm-6">
 
-
-
-
-                                                            <div class="register-section" id="profile-details-section">
-
-                                                                <h4>Profile Details</h4>
-
-
-
-                                                                <div class="editfield field_1 field_name required-field visibility-public field_type_textbox">
-
-
-                                                                    <label for="field_1">
-                                                                        Name							(required)					</label>
-
-
-                                                                    <input id="field_1" name="field_1" type="text" value="" aria-required="true" >
-
-                                                                    <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1">
-                                                                        This field can be seen by: <span class="current-visibility-level">Everyone</span>										</p>
-
-
-                                                                    <p class="description"></p>
-
-                                                                </div>
-
-
-                                                                <div class="editfield field_2 field_my-quote optional-field visibility-public alt field_type_textbox">
-
-
-                                                                    <label for="field_2">
-                                                                        My Quote					</label>
-
-
-                                                                    <input id="field_2" name="field_2" type="text" value="" >
-
-                                                                    <p class="field-visibility-settings-toggle" id="field-visibility-settings-toggle-2">
-                                                                        This field can be seen by: <span class="current-visibility-level">Everyone</span> <a href="#" class="visibility-toggle-link">Change</a>
-                                                                    </p>
-
-                                                                    <div class="field-visibility-settings" id="field-visibility-settings-2">
-                                                                        <fieldset>
-                                                                            <legend>Who can see this field?</legend>
-
-                                                                            <ul class="radio">
-
-
-                                                                                <li class="public">
-                                                                                    <label for="see-field_2_public">
-                                                                                        <input type="radio" id="see-field_2_public" name="field_2_visibility" value="public"  checked='checked' />
-                                                                                        <span class="field-visibility-text">Everyone</span>
-                                                                                    </label>
-
-                                                                                </li>
-
-                                                                                <li class="adminsonly">
-                                                                                    <label for="see-field_2_adminsonly">
-                                                                                        <input type="radio" id="see-field_2_adminsonly" name="field_2_visibility" value="adminsonly"  />
-                                                                                        <span class="field-visibility-text">Only Me</span>
-                                                                                    </label>
-
-                                                                                </li>
-
-                                                                                <li class="loggedin">
-                                                                                    <label for="see-field_2_loggedin">
-                                                                                        <input type="radio" id="see-field_2_loggedin" name="field_2_visibility" value="loggedin"  />
-                                                                                        <span class="field-visibility-text">All Members</span>
-                                                                                    </label>
-
-                                                                                </li>
-
-                                                                                <li class="friends">
-                                                                                    <label for="see-field_2_friends">
-                                                                                        <input type="radio" id="see-field_2_friends" name="field_2_visibility" value="friends"  />
-                                                                                        <span class="field-visibility-text">My Friends</span>
-                                                                                    </label>
-
-                                                                                </li>
-
-                                                                            </ul>
-                                                                        </fieldset>
-                                                                        <a class="field-visibility-settings-close" href="#">Close</a>
-
-                                                                    </div>
-
-
-                                                                    <p class="description"></p>
-
-                                                                </div>
-
-
-                                                                <input type="hidden" name="signup_profile_field_ids" id="signup_profile_field_ids" value="1,2" />
-
-
-
-                                                            </div><!-- #profile-details-section -->
-
-
-
-                                                        </div>
                                                     </div>
 
 
@@ -979,3 +878,11 @@
 </body>
 
 </html>
+<script>
+    function submitpasse(){
+        if(document.getElementsByName("password_confirm")[0].value!=document.getElementsByName("password")[0].value) {
+            return false;
+        }
+            return true;
+    }
+</script>

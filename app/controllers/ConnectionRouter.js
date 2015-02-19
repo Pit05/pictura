@@ -30,19 +30,22 @@ module.exports = function(app) {
 
     });
     app.post('/Inscription/Membre', function (req, res) {
+
         var data={
             _id:objectId,
-            pseudo:"test",
-            email:"test@gmail.fr",
+            pseudo:req.body.pseudo,
+            email:req.body.email,
             image_url:"frontend/img/upload/image_0000",
-            mdp:"azerty",
+            mdp:req.body.password,
             badge_id:"54d7867573a8651b8969649c"
         }
         userDao.save(data,function(cb){
                 if(cb==false)
                     console.dir("Sauvegarde impossible");
         });
+
        // res.redirect('/Home');
+
     });
     app.get('/register', function (req, res) {
         res.render('frontend/pages/register');
