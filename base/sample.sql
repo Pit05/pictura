@@ -108,7 +108,14 @@ db.User.insert(
     "mdp":"azerty",
   "badge_id":"54d7867573a8651b8969649c"}
 );
-
+db.createCollection("Vote",{autoIndexId:true});
+db.Vote.ensureIndex({"photos_id":1,"user_id":1},{unique:true})
+db.Vote.insert(
+        {
+                "photos_id":"54e4c519edf460b009622a20",
+                "user_id":"54e1fae4712ad4d4f7f9e1bc"
+        }
+);
 db.createCollection("Photos",{autoIndexId:true});
   db.Photos.insert(
   {"title":"moi et lui", "description":"","date_publi":new Date('2015-02-12'),"vote":3,"image_url":"",

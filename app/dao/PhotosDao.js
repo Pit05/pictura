@@ -44,7 +44,7 @@ module.exports.findAll= function(cb){
 }
 module.exports.findById=function(id,cb){
 
-    Users.findById(id,function (err, user) {
+    Photos.findById(id,function (err, user) {
         if (err) return console.error(err);
         //console.dir(listeBadge);
         //  rep = listeBadge;
@@ -56,19 +56,19 @@ module.exports.findById=function(id,cb){
 }
 module.exports.save=function(data,cb){
 
-    new  Users(data).save(function(err, site) {
+    new  Photos(data).save(function(err, site) {
         if(err)  console.error(err);
         else  cb(true);
 
     });
 
 }
-module.exports.update=function(data,cb){
+module.exports.update=function(id,data,cb){
 
-    Users.findByIdAndUpdate(id, data, function (err, post) {
+    Photos.findByIdAndUpdate(id, data, function (err, post) {
         if (err) return next(err);
         // res.json(post);
-        else   cb(true);
+        else   cb(post);
     });
 
 }
