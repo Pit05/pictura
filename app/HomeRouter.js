@@ -4,37 +4,12 @@
 
 var  UserCollection=require('./models/UserCollection');
 var  badgeDao=require('./dao/BadgeDao');
-var  PhotosDao=require('./dao/PhotosDao');
-var  UsersDao=require('./dao/UsersDao');
-var  ThemeDao=require('./dao/ThemeDao');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var  express=require('express');
-var moment = require("moment");
 module.exports = function(app) {
 
-    app.get('/', function (req, res) {
-        /* var  thor=new  UserCollection({username:"rrrrrr"});
-         //   res.send('exemple/54d0afe1090352502727cf22',thor);
-         UserCollection.find(function(err, movies) {
-         if (err) return console.error(err);
-         console.dir(movies);
-         res.render('pages/chat', {movies: movies});
-
-         });*/
-        res.render('frontend/pages/accueil');
-        /*var  re;
-         badgeDao.findAll(function(cb){
-         console.dir(cb);
-         }
-         );*/
-        //require('./controllers/BadgeRouter.js')(app);
-
-
-
-
-    });
-    app.get('/register', function (req, res) {
+    app.get('/gg', function (req, res) {
        /* var  thor=new  UserCollection({username:"rrrrrr"});
      //   res.send('exemple/54d0afe1090352502727cf22',thor);
         UserCollection.find(function(err, movies) {
@@ -43,7 +18,7 @@ module.exports = function(app) {
             res.render('pages/chat', {movies: movies});
 
         });*/
-        res.render('frontend/pages/register');
+        res.render('frontend/pages/accueil',{data:data});
         /*var  re;
         badgeDao.findAll(function(cb){
                 console.dir(cb);
@@ -111,20 +86,7 @@ module.exports = function(app) {
     });
 
 
-    app.get('/test', function(req, res, next) {
-        /*PhotosDao.findAll(function(cb){
-            console.dir(cb);
-        });*/
-       /* ThemeDao.getThemeCourant(function(cb){
-            console.dir(cb);
-        });*/
-       /*PhotosDao.getListImageNow(function(cb){
-           console.dir(cb);
 
-
-        });*/
-        res.render('pages/chat');
-    });
 
 
 };

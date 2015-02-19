@@ -9,6 +9,7 @@ module.exports = function(app) {
     app.get('/Login/Membre', function (req, res) {
 
     });
+
     app.post('/Login/Membre', function (req, res) {
         var data={
             email:"njaraliantsoa@gmail.com",
@@ -42,5 +43,8 @@ module.exports = function(app) {
                     console.dir("Sauvegarde impossible");
         });
        // res.redirect('/Home');
+    });
+    app.get('/register', function (req, res) {
+        res.render('frontend/pages/register');
     });
 }

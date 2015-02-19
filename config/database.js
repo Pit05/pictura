@@ -4,5 +4,5 @@
 module.exports = {
 
     // the database url to connect
-    url : 'mongodb://localhost:27017/pictura'
+    url : 'mongodb://samsung-njara:27017/pictura'
 }

@@ -10,6 +10,14 @@ var Theme=require('../models/Theme');
 //var  TypeThemeDao=require('../mode  ls/TypeThemeDao');
 var mongoose = require('mongoose');
 var moment = require("moment");
+module.exports.findImage=function(data,cb){
+
+    Photos.find(data).populate('user_id').populate('theme_id').exec(function(err,cb1){
+        if(err) return console.error( err);
+
+        cb( cb1);
+    });
+}
 module.exports.getListImageNow=function(cb){
     var now =moment(new Date());
 
