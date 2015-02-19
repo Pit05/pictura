@@ -1,23 +1,37 @@
 /**
+ * Created by Njara on 16/02/2015.
+ */
+/**
  * Created by Njara on 08/02/2015.
  */
 var  Users=require('../models/Users');
-var Badge=require('../models/Badge');
+var Photos=require('../models/Photos');
+var Theme=require('../models/Theme');
 //var  TypeThemeDao=require('../mode  ls/TypeThemeDao');
 var mongoose = require('mongoose');
-var listeUser1;
-module.exports.testLoginMembre=function(data,cb){
-            Users.findOne(data).populate('badge_id').exec(function(err,cb1){
-                if(err) return console.error( err);
-                cb( cb1);
-            });
-};
-module.exports.findAll= function(cb){
+var moment = require("moment");
+module.exports.getListImageNow=function(cb){
+    var now =moment(new Date());
 
-        Users.find({}).populate('badge_id').exec(function(err,cb1){
-            if(err) return console.error( err);
+
+    var data={
+        "date_publi":new Date(now.format("YYYY-MM-DD"))
+
+
+    };
+    Photos.find(data).populate('user_id').populate('theme_id').exec(function(err,cb1){
+        if(err) return console.error( err);
+
+        cb( cb1);
+    });
+}
+
+module.exports.findAll= function(cb){
+    Photos.find({}).populate('user_id').populate('theme_id').exec(function(err,cb1){
+        if(err) return console.error( err);
+
             cb( cb1);
-        });
+    });
 
 }
 module.exports.findById=function(id,cb){

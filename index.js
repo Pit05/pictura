@@ -8,6 +8,7 @@ var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var database = require('./config/database'); // mongoose for mongodb
+var session = require('client-sessions');
 var port  	 = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
@@ -31,13 +32,19 @@ db.once('open', function() {
 });
 mongoose.connect(database.url);
 app.use(express.static(__dirname + '/public'));
-
+app.use(session({
+    cookieName: 'session',
+    secret: 'random_string_goes_here',
+    duration: 30 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000
+}));
 
 require('./app/HomeRouter.js')(app);
 require('./app/controllers/LoginRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);
 require('./app/controllers/backEnd/ThemeRouter.js')(app);
+require('./app/controllers/ConnectionRouter.js')(app);
 //require('./app/controllers/BadgeRouter.js')(app);
 
 io.on('connection', function(socket){

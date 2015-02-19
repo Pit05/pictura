@@ -4,9 +4,13 @@
 
 var  UserCollection=require('./models/UserCollection');
 var  badgeDao=require('./dao/BadgeDao');
+var  PhotosDao=require('./dao/PhotosDao');
+var  UsersDao=require('./dao/UsersDao');
+var  ThemeDao=require('./dao/ThemeDao');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var  express=require('express');
+var moment = require("moment");
 module.exports = function(app) {
 
     app.get('/', function (req, res) {
@@ -107,7 +111,20 @@ module.exports = function(app) {
     });
 
 
+    app.get('/test', function(req, res, next) {
+        /*PhotosDao.findAll(function(cb){
+            console.dir(cb);
+        });*/
+       /* ThemeDao.getThemeCourant(function(cb){
+            console.dir(cb);
+        });*/
+       /*PhotosDao.getListImageNow(function(cb){
+           console.dir(cb);
 
+
+        });*/
+        res.render('pages/chat');
+    });
 
 
 };

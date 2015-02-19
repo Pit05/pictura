@@ -4,11 +4,14 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
-var TypeTheme = require('./TypeTheme').TypeTheme;
+//var TypeTheme = require('./TypeTheme').TypeTheme;
 var Theme = new Schema({
     _id: ObjectId,
-    typetheme:[TypeTheme],
+    title: String,
+    description: String,
+    avis: Number,
     date_debut: Date,
     date_fin: Date
 })
+//module.exports.Theme=Theme;
 module.exports=mongoose.model('Theme', Theme,'Theme');
