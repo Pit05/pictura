@@ -7,7 +7,8 @@ var io = require('socket.io')(http);
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
-//var database = require('./config/database'); // mongoose for mongodb
+var database = require('./config/database'); // mongoose for mongodb
+var session = require('client-sessions');
 var port  	 = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
@@ -18,7 +19,12 @@ var multer = require('multer');
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(multer());
-
+app.use(session({
+    cookieName: 'session',
+    secret: 'random_string_goes_here',
+    duration: 30 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000
+}));
 
 // Connect to the db
 var Schema = mongoose.Schema;
@@ -29,7 +35,7 @@ db.on('error', console.error);
 db.once('open', function() {
     // Create your schemas and models here.
 });
-//mongoose.connect(database.url);
+mongoose.connect(database.url);
 app.use(express.static(__dirname + '/public'));
 
 require('./app/controllers/frontend/accueilRooter.js')(app);
