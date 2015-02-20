@@ -13,8 +13,8 @@ module.exports = function(app) {
     app.get('/Photo/Vote/:id', function (req, res) {
         var data={
             _id:objectId,
-            id_photo:"54e4c519edf460b009622a20",
-            user_id:"54e1fae4712ad4d4f7f9e1bc"
+            id_photo:req.params.id,
+            user_id:req.session.user._id
         }
 
         voteDao.save(data,function(cb){
@@ -26,8 +26,10 @@ module.exports = function(app) {
                         console.dir("fdfdf");
                         PhotosDao.update({_id:"54e4c519edf460b009622a20"},dataUp,function(imageUp){
                                             console.dir(imageUp);
+
                             UsersDao.testChangeBadge(imageUp,function(callb){
-                                            console.dir(callb);
+                                req.json(callb);
+
                             });
                         });
                 }
