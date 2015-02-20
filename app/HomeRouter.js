@@ -51,11 +51,13 @@ module.exports = function(app) {
             }
         );*/
         //require('./controllers/BadgeRouter.js')(app);
-
-
-
-
     });
+
+    app.get('/photo', function (req, res){
+            res.render('frontend/pages/photo');
+        });
+
+
     app.get('/admin', function (req, res) {
 
         /* var  thor=new  UserCollection({username:"rrrrrr"});
