@@ -38,14 +38,14 @@ module.exports = function(app) {
 
         })
     });
-    app.get('/Photo/Detail/:id', function (req, res) {
+    app.get('/Photo/:id', function (req, res) {
+
         var data={
-            photos_id:"54e4c519edf460b009622a20"
+            photos_id:req.params.id
             //user_id:"54e4c519edf460b009622a20"
         }
-        commentaireDao.findAll(data,function(err,cb1){
-            if(err) return console.error( err);
-                 console.dir(cb1);
+        commentaireDao.findAll(data,function(cb1){
+            res.render("frontend/pages/photo");
         });
 
         /*PhotosDao.findImage({},function(cb){
