@@ -46,6 +46,7 @@ require('./app/controllers/LoginRouter.js')(app);
 require('./app/controllers/frontend/PhotosRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);
+require('./app/controllers/frontend/ProfileRouter.js')(app);
 //require('./app/controllers/BadgeRouter.js')(app);
 
 var usernames = {};
