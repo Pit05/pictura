@@ -65,7 +65,11 @@ module.exports = function(app) {
                 date_fin: 'Sat Jun 20 2015 00:00:00 GMT+0200 (Paris, Madrid)' } } ]
 
         var theme="Theme 1";
-        res.render('frontend/pages/accueil',{data:data,theme:theme,isconnecter:false});
+        var isconnecter=false;
+        if(req.session.user){
+            isconnecter=true;
+        }
+        res.render('frontend/pages/accueil',{data:data,theme:theme,isconnecter:isconnecter,utilisateur:req.session.user});
 
 
 

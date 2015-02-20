@@ -12,8 +12,8 @@ module.exports = function(app) {
 
     app.post('/Login/Membre', function (req, res) {
         var data={
-            email:"njaraliantsoa@gmail.com",
-            mdp:"azerty"
+            email:req.body.email,
+            mdp:req.body.password
         }
         userDao.testLoginMembre(data,function(cb){
 
@@ -22,10 +22,10 @@ module.exports = function(app) {
             else {
                console.dir(cb);
                req.session.user=cb;
-               delete  req.session.user.mdp
+               delete  req.session.user.mdp;
                req.session.user=cb;
            }
-            //res.redirect('/Home');!
+            res.redirect('/');
         })
 
     });
