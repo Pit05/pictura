@@ -6,6 +6,7 @@ var  PhotosDao=require('../../dao/PhotosDao');
 var  commentaireDao=require('../../dao/CommentaireDao');
 var  voteDao=require('../../dao/VoteDao');
 var commentaire=require('../../models/Commentaires');
+var moment=require('moment');
 ObjectID = require('mongodb').ObjectID;
 var objectId = new ObjectID();
 module.exports = function(app) {
@@ -38,6 +39,19 @@ module.exports = function(app) {
 
         })
     });
+    app.post('/Photo/AjoutCommentaire', function (req, res) {
+        var now =moment(new Date());
+         var data={
+             _id:objectId,
+             photos_id:req.body.photo,
+             user_id:req.session.user.user_id,
+             message:req.body.commentaire,
+             date:new Date(now.format("YYYY-MM-DD"))
+         }
+        commentaireDao.save(data,function(err,cb1){
+            if(err) return console.error( err); console.dir(cb1);
+        });
+    });
     app.get('/Photo/:id', function (req, res) {
 
         var data={
@@ -45,7 +59,10 @@ module.exports = function(app) {
             //user_id:"54e4c519edf460b009622a20"
         }
         commentaireDao.findAll(data,function(cb1){
-            res.render("frontend/pages/photo");
+            PhotosDao.findById(req.params.id,function(cb2){
+
+               res.render("frontend/pages/photo",{infocommentaire:cb1,infophoto:cb2});
+            });
         });
 
         /*PhotosDao.findImage({},function(cb){

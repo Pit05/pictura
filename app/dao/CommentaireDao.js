@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var moment = require("moment");
 module.exports.findAll=function(data,cb){
 
-    commentaire.find(data).populate('photos_id').exec(function(err,cb1){
+    commentaire.find(data).populate('photos_id').populate('user_id').exec(function(err,cb1){
         if(err) return console.error( err);
         cb(cb1);
     });
@@ -51,7 +51,7 @@ module.exports.findById=function(id,cb){
 }
 module.exports.save=function(data,cb){
 
-    new  Photos(data).save(function(err, site) {
+    new  commentaire(data).save(function(err, site) {
         if(err)  console.error(err);
         else  cb(true);
 

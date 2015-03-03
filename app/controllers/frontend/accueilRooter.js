@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+var  PhotosDao=require('../../dao/PhotosDao');
+var ThemeService=require('../../service/ThemeService');
 module.exports = function(app) {
     app.get('/', function (req, res) {
 
@@ -69,7 +71,12 @@ module.exports = function(app) {
         if(req.session.user){
             isconnecter=true;
         }
-        res.render('frontend/pages/accueil',{data:data,theme:theme,isconnecter:isconnecter,utilisateur:req.session.user});
+        PhotosDao.findAll(function(cb1){
+            ThemeService.getThemeCourant(function(th){
+                res.render('frontend/pages/accueil',{data:cb1,theme:th.titre,isconnecter:isconnecter,utilisateur:req.session.user});
+            });
+
+        });
 
 
 
