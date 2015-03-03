@@ -59,25 +59,24 @@
 
                                 <div class="article-meta">
 			<span class="post-meta">
-				<small class="meta-author author vcard"><a class="url fn n" href="http://seventhqueen.com/themes/kleo/members/kleoadmin/" title="View all posts by Jonathan Doe" rel="author"> <span class="author-name">Jonathan Doe</span></a></small>, <small><a href="index.html" rel="bookmark" class="post-time"><time class="entry-date" datetime="2014-09-12T14:50:27+00:00">September 12, 2014</time><time class="modify-date hide hidden updated" datetime="2014-09-12T14:50:27+00:00">September 12, 2014</time></a></small>, <small class="meta-category"><a href="http://seventhqueen.com/themes/kleo/category/courses/" rel="category tag">Courses</a></small>, <small class="meta-comment-count"><a href="index.html#comments">4 <i class="icon-chat-1 hover-tip" data-original-title="This article has 4 comments" data-toggle="tooltip" data-placement="top"></i></a></small>			</span>
+				<small class="meta-author author vcard"><a class="url fn n" href="http://seventhqueen.com/themes/kleo/members/kleoadmin/" title="View all posts by Jonathan Doe" rel="author"> <span class="author-name"><%=infophoto.user_id.pseudo%></span></a></small>, <small><a href="index.html" rel="bookmark" class="post-time"><time class="entry-date" datetime="2014-09-12T14:50:27+00:00">September 12, 2014</time><time class="modify-date hide hidden updated" datetime="2014-09-12T14:50:27+00:00">September 12, 2014</time></a></small>, <small class="meta-category"><a href="http://seventhqueen.com/themes/kleo/category/courses/" rel="category tag"><%=infophoto.theme_id.title;%></a></small>, <small class="meta-comment-count"><a href="index.html#comments">4 <i class="icon-chat-1 hover-tip" data-original-title="This article has 4 comments" data-toggle="tooltip" data-placement="top"></i></a></small>			</span>
                                 </div><!--end article-meta-->
 
 
                                 <div class="article-media">
-                                    <img width="1024" height="576" src="../../wp-content/uploads/2014/09/image_0105.jpg" class="attachment-kleo-full-width wp-post-image" alt="image_0105" />		</div><!--end article-media-->
+                                    <img width="1024" height="576" src="<%=infophoto.image_url;%>" class="attachment-kleo-full-width wp-post-image" alt="image_0105" />		</div><!--end article-media-->
 
 
 
                                 <div class="article-content">
 
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8217;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <p><%infophoto.description;%></p>
 
 
                                 </div><!--end article-content-->
 
                             </article>
-                            <!-- End  Article -->
+                            <!-- End  Article -->=
 
                             <section class="container-wrap">
                                 <div class="container">
@@ -87,7 +86,7 @@
 
 
                 <span class="kleo-love">
-                <a href="#" class="item-likes" id="item-likes-3367" title="Like this"><span class="item-likes-count">411</span> <span class="item-likes-postfix">likes</span></a>                </span>
+                <a href="#" class="item-likes" id="item-likes-3367" title="Like this"><span class="item-likes-count"><%=infophoto.vote;%></span> <span class="item-likes-postfix">likes</span></a>                </span>
 
 
 
@@ -145,7 +144,7 @@
                                                                 <h4 class="post-title entry-title"><a href="http://seventhqueen.com/themes/kleo/courses/marketing-management/">Marketing Management</a></h4>
 
             <span class="post-meta hidden hide">
-                <small class="meta-author author vcard"><a class="url fn n" href="http://seventhqueen.com/themes/kleo/members/kleoadmin/" title="View all posts by Jonathan Doe" rel="author"> <span class="author-name">Jonathan Doe</span></a></small>, <small><a href="http://seventhqueen.com/themes/kleo/courses/marketing-management/" rel="bookmark" class="post-time"><time class="entry-date" datetime="2014-09-12T14:15:56+00:00">September 12, 2014</time><time class="modify-date hide hidden updated" datetime="2014-09-12T14:15:56+00:00">September 12, 2014</time></a></small>, <small class="meta-category"><a href="http://seventhqueen.com/themes/kleo/category/courses/" rel="category tag">Courses</a></small>, <small class="meta-comment-count"><a href="http://seventhqueen.com/themes/kleo/courses/marketing-management/#comments">0 <i class="icon-chat-1 hover-tip" data-original-title="This article has 0 comments" data-toggle="tooltip" data-placement="top"></i></a></small>            </span>
+                <small class="meta-author author vcard"><a class="url fn n" href="http://seventhqueen.com/themes/kleo/members/kleoadmin/" title="View all posts by Jonathan Doe" rel="author"> <span class="author-name"><%=infophoto.user_id.pseudo;%></span></a></small>, <small><a href="http://seventhqueen.com/themes/kleo/courses/marketing-management/" rel="bookmark" class="post-time"><time class="entry-date" datetime="2014-09-12T14:15:56+00:00">September 12, 2014</time><time class="modify-date hide hidden updated" datetime="2014-09-12T14:15:56+00:00">September 12, 2014</time></a></small>, <small class="meta-category"><a href="http://seventhqueen.com/themes/kleo/category/courses/" rel="category tag">Courses</a></small>, <small class="meta-comment-count"><a href="http://seventhqueen.com/themes/kleo/courses/marketing-management/#comments">0 <i class="icon-chat-1 hover-tip" data-original-title="This article has 0 comments" data-toggle="tooltip" data-placement="top"></i></a></small>            </span>
 
                                                                 <hr>
                                                                 <div class="entry-summary">
@@ -225,68 +224,23 @@
                                         <div id="comments-list">
 
                                             <ol>
+                                                <%infocommentaire.forEach(function(commentaire){ %>
                                                 <li id="comment-799" class="comment even thread-even depth-1 clearfix">
                                                     <div class="comment-wrap clearfix">
                                                         <div class="comment-avatar kleo-rounded">
                                                             <img src="http://gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&amp;s=100&amp;r=G" class="avatar user-23813-avatar avatar-100 photo" width="100" height="100" alt="Profile photo of Vienna" />									</div>
                                                         <div class="comment-content">
                                                             <div class="comment-meta">
-                                                                <span class="comment-author">Vienna</span> <span class="comment-date">5 months ago</span>					</div>
+                                                                <span class="comment-author"><%=commentaire.user_id.pseudo;%></span> <!--<span class="comment-date">5 months ago</span>					--></div>
                                                             <div class="comment-body">
-                                                                <p>等等</p>
+                                                                <p><%=commentaire.commentaire;%></p>
                                                             </div>
-                                                            <div class="comment-meta-actions">
+                                                            <!--<div class="comment-meta-actions">
                                                                 <span class="comment-reply"><a class='comment-reply-link' href='indexccb7.html?replytocom=799#respond' onclick='return addComment.moveForm( "comment-799", "799", "respond", "3367" )' aria-label='Reply to Vienna'>Reply</a></span>					</div>
-                                                        </div>
+                                                        </div>-->
                                                     </div>
                                                 </li><!-- #comment-## -->
-                                                <li id="comment-1175" class="comment byuser comment-author-demo odd alt thread-odd thread-alt depth-1 clearfix">
-                                                    <div class="comment-wrap clearfix">
-                                                        <div class="comment-avatar kleo-rounded">
-                                                            <img src="../../wp-content/uploads/avatars/35231/7859f040cc491fdc0129b7ff1a733d43-bpfull.jpg" class="avatar user-35231-avatar avatar-100 photo" width="100" height="100" alt="Profile photo of Raffaeleo" />									</div>
-                                                        <div class="comment-content">
-                                                            <div class="comment-meta">
-                                                                <span class="comment-author"><a href='http://seventhqueen.com/themes/kleo/members/demo/' rel='external nofollow' class='url'>Raffaeleo</a></span> <span class="comment-date">3 months ago</span>					</div>
-                                                            <div class="comment-body">
-                                                                <p>hi</p>
-                                                            </div>
-                                                            <div class="comment-meta-actions">
-                                                                <span class="comment-reply"><a class='comment-reply-link' href='indexb57f.html?replytocom=1175#respond' onclick='return addComment.moveForm( "comment-1175", "1175", "respond", "3367" )' aria-label='Reply to Raffaeleo'>Reply</a></span>					</div>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="children">
-                                                        <li id="comment-1235" class="comment byuser comment-author-kitak-kim even depth-2 clearfix">
-                                                            <div class="comment-wrap clearfix">
-                                                                <div class="comment-avatar kleo-rounded">
-                                                                    <img src='https://graph.facebook.com/805344799529816/picture?width=580&amp;height=580' class="avatar user-35880-avatar avatar-100 photo" width="100" height="100" alt="Profile photo of Kitak Kim" />									</div>
-                                                                <div class="comment-content">
-                                                                    <div class="comment-meta">
-                                                                        <span class="comment-author"><a href='http://seventhqueen.com/themes/kleo/members/kitak-kim/' rel='external nofollow' class='url'>Kitak Kim</a></span> <span class="comment-date">2 months ago</span>					</div>
-                                                                    <div class="comment-body">
-                                                                        <p>yo</p>
-                                                                    </div>
-                                                                    <div class="comment-meta-actions">
-                                                                        <span class="comment-reply"><a class='comment-reply-link' href='index540b.html?replytocom=1235#respond' onclick='return addComment.moveForm( "comment-1235", "1235", "respond", "3367" )' aria-label='Reply to Kitak Kim'>Reply</a></span>					</div>
-                                                                </div>
-                                                            </div>
-                                                        </li><!-- #comment-## -->
-                                                        <li id="comment-1521" class="comment byuser comment-author-andres-gonzalez-castro odd alt depth-2 clearfix">
-                                                            <div class="comment-wrap clearfix">
-                                                                <div class="comment-avatar kleo-rounded">
-                                                                    <img src='https://graph.facebook.com/10152421261768517/picture?width=580&amp;height=580' class="avatar user-35324-avatar avatar-100 photo" width="100" height="100" alt="Profile photo of Andrés González Castro" />									</div>
-                                                                <div class="comment-content">
-                                                                    <div class="comment-meta">
-                                                                        <span class="comment-author"><a href='http://seventhqueen.com/themes/kleo/members/andres-gonzalez-castro/' rel='external nofollow' class='url'>Andrés González Castro</a></span> <span class="comment-date">2 weeks ago</span>					</div>
-                                                                    <div class="comment-body">
-                                                                        <p>Hello</p>
-                                                                    </div>
-                                                                    <div class="comment-meta-actions">
-                                                                        <span class="comment-reply"><a class='comment-reply-link' href='index43d3.html?replytocom=1521#respond' onclick='return addComment.moveForm( "comment-1521", "1521", "respond", "3367" )' aria-label='Reply to Andrés González Castro'>Reply</a></span>					</div>
-                                                                </div>
-                                                            </div>
-                                                        </li><!-- #comment-## -->
-                                                    </ul><!-- .children -->
-                                                </li><!-- #comment-## -->
+                                                <%});%>
                                             </ol>
 
 
@@ -297,15 +251,14 @@
 
                                         <div id="respond-wrap">
                                             <div id="respond" class="comment-respond">
-                                                <h3 id="reply-title" class="comment-reply-title">Leave a reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Click here to cancel the reply</a></small></h3>
-                                                <form action="http://seventhqueen.com/themes/kleo/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
-                                                    <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>							<div class="row"><p class="comment-form-author col-sm-4"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" class="form-control" value="" size="30" aria-required='true' /></p>
+                                                <h3 id="reply-title" class="comment-reply-title">Poster commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Click here to cancel the reply</a></small></h3>
+                                                <form action="/Photo/AjoutCommentaire" method="post" id="commentform" class="comment-form" novalidate>
+                                                    <!--<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>	-->						<!--<div class="row"><p class="comment-form-author col-sm-4"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" class="form-control" value="" size="30" aria-required='true' /></p>
                                                         <p class="comment-form-email col-sm-4"><label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" class="form-control" value="" size="30" aria-required='true' /></p>
-                                                        <p class="comment-form-url col-sm-4"><label for="url">Website</label><input id="url" name="url" type="text" class="form-control" value="" size="30" /></p></div>
-                                                    <p class="comment-form-comment"><label for="comment">Comment</label><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
-                                                        <input name="submit" type="submit" id="submit" class="submit" value="Post comment" />
-                                                        <input type='hidden' name='comment_post_ID' value='3367' id='comment_post_ID' />
-                                                        <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                        <p class="comment-form-url col-sm-4"><label for="url">Website</label><input id="url" name="url" type="text" class="form-control" value="" size="30" /></p></div>-->
+                                                    <p class="comment-form-comment"><label for="comment">Commentaire</label><textarea class="form-control" id="comment" name="commentaire" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+                                                        <input name="submit" type="submit" id="submit" class="submit" value="Poster" />
+                                                        <input type='hidden' name='photo' id='comment_parent' value='<%=infophoto._id;%>' />
                                                     </p>
                                                 </form>
                                             </div><!-- #respond -->

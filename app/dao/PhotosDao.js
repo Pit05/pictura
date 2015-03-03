@@ -44,13 +44,13 @@ module.exports.findAll= function(cb){
 }
 module.exports.findById=function(id,cb){
 
-    Photos.findById(id,function (err, user) {
+    Photos.findById(id).populate('user_id').populate('theme_id').exec(function(err,cb1){
         if (err) return console.error(err);
         //console.dir(listeBadge);
         //  rep = listeBadge;
         //  console.dir(rep);
         //  rep=listeBadge;
-        cb(user);
+        cb(cb1);
     });
 
 }
