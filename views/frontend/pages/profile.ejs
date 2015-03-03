@@ -12,7 +12,18 @@
 <head>
     <title>Profile user</title>
 
-   <% include ../partials/head%>
+   <% include ../partials/head-profile %>
+    <!--Photo Cover -->
+    <style type="text/css">
+        body.buddypress.is-user-profile div#item-header {
+            background-image: url("../frontend/img/uploads/BMW-M3-E92.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <!--Photo Cover -->
+
 </head>
 
 
@@ -28,197 +39,8 @@
 
     <!-- HEADER SECTION
     ================================================ -->
-
-    <div id="header" class="header-color">
-
-        <div class="navbar" role="navigation">
-
-
-            <!--Attributes-->
-            <!--class = social-header inverse-->
-            <div class="social-header header-color">
-                <div class="container">
-                    <div class="top-bar">
-
-                        <div id="top-social" class="col-sm-12 col-md-5 no-padd">
-                            <ul class="kleo-social-icons"><li><a target="_blank" href="https://twitter.com/SeventhQueen"><i class="icon-twitter"></i><div class="ts-text">Twitter</div></a></li><li><a target="_blank" href="https://www.facebook.com/seventhqueen.themes"><i class="icon-facebook"></i><div class="ts-text">Facebook</div></a></li><li><a target="_blank" href="https://dribbble.com/seventhqueen"><i class="icon-dribbble"></i><div class="ts-text">Dribbble</div></a></li><li><a target="_blank" href="https://plus.google.com/+Seventhqueen"><i class="icon-gplus"></i><div class="ts-text">Google+</div></a></li></ul>                </div>
-
-                        <div class="top-menu col-sm-12 col-md-7 no-padd"><ul id="menu-kleotopmenu" class=""><li id="menu-item-1618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a title="Wishlist" href="http://seventhqueen.com/themes/kleo/wishlist/">Wishlist</a></li>
-                                <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a title="Menu Item 1" href="#">Menu Item 1</a></li>
-                                <li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a title="Menu item 2" href="#">Menu item 2</a></li>
-                                <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a title="Contact us" href="http://seventhqueen.com/themes/kleo/contact/">Contact us</a></li>
-                                <li id="menu-item-913" class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-913"><a title="Log In" href="http://seventhqueen.com/themes/kleo/wp-login.php?redirect_to=http%3A%2F%2Fseventhqueen.com%2Fthemes%2Fkleo%2Fmembers%2Fdemo%2Fprofile%2F">Log In</a></li>
-                                <li id="menu-item-914" class="bp-menu bp-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-914"><a title="Register" href="http://seventhqueen.com/themes/kleo/register">Register</a></li>
-                            </ul></div>
-                    </div><!--end top-bar-->
-                </div>
-            </div>
-
-
-            <div class="kleo-main-header header-normal">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <div class="kleo-mobile-switch">
-
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-
-                        </div>
-
-                        <div class="kleo-mobile-icons">
-
-                            <a class="cart-contents mheader" href="http://seventhqueen.com/themes/kleo/cart/" title="View Cart"><span class="cart-items"><i class="icon icon-basket-full-alt"></i> </a>
-                        </div>
-
-                        <strong class="logo">
-                            <a href="http://seventhqueen.com/themes/kleo">
-
-
-                                <img id="logo_img" title="Kleo Template" src="../../../wp-content/themes/kleo/assets/img/logo_black_teal.png" alt="Kleo Template">
-
-
-                            </a>
-                        </strong>
-                    </div>
-
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse"><ul id="menu-kleonavmenu" class="nav navbar-nav"><li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-832 dropdown mega-11-cols"><a title="Home" href="http://seventhqueen.com/themes/kleo/home-default/" class="js-activated">Home <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-3953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3953"><a title="Pinterest Style NEW" href="http://seventhqueen.com/themes/kleo/pinterest/">Pinterest Style <em>NEW</em></a></li>
-                                    <li id="menu-item-3973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3973"><a title="Portfolio Fullwidth Overlay" href="http://seventhqueen.com/themes/kleo/portfolio-full-width/">Portfolio Fullwidth Overlay</a></li>
-                                    <li id="menu-item-3959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3959"><a title="E-learning" href="http://seventhqueen.com/themes/kleo/e-learning-home/">E-learning</a></li>
-                                    <li id="menu-item-4887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4887"><a title="Merry Christmas NEW" href="http://seventhqueen.com/themes/kleo/merry-christmas/">Merry Christmas <em>NEW</em></a></li>
-                                    <li id="menu-item-4886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4886"><a title="Happy New Year NEW" href="http://seventhqueen.com/themes/kleo/merry-christmas-happy-new-year/">Happy New Year <em>NEW</em></a></li>
-                                    <li id="menu-item-4700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4700"><a title="Black Friday" href="http://seventhqueen.com/themes/kleo/black-friday/">Black Friday</a></li>
-                                    <li id="menu-item-4494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4494"><a title="Stylish Woocommerce NEW" href="http://seventhqueen.com/themes/kleo/stylish-woocommerce/">Stylish Woocommerce <em>NEW</em></a></li>
-                                    <li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"><a title="Home Community" href="http://seventhqueen.com/themes/kleo/home-default/">Home Community</a></li>
-                                    <li id="menu-item-4127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4127"><a title="Agency Multisite" href="http://seventhqueen.com/themes/kleo/demo-agency/">Agency <em>Multisite</em></a></li>
-                                    <li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-834"><a title="Home Simple" href="http://seventhqueen.com/themes/kleo/home/">Home Simple</a></li>
-                                    <li id="menu-item-2151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2151"><a title="Home Shop" href="http://seventhqueen.com/themes/kleo/default-shop/">Home Shop</a></li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-27 dropdown mega-4-cols"><a title="Community" href="#" class="js-activated">Community <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12 current_page_item"><a title="Members" href="http://seventhqueen.com/themes/kleo/members/">Members</a></li>
-                                    <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a title="Groups" href="http://seventhqueen.com/themes/kleo/groups/">Groups</a></li>
-                                    <li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a title="Activity" href="http://seventhqueen.com/themes/kleo/activity/">Activity</a></li>
-                                    <li id="menu-item-436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-436 dropdown-submenu"><a title="Forums" href="http://seventhqueen.com/themes/kleo/forums">Forums <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-438"><a title="Upcomming Features" href="http://seventhqueen.com/themes/kleo/groups/gladiator/forum/">Upcomming Features</a></li>
-                                            <li id="menu-item-437" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-437"><a title="Design with pleasure" href="http://seventhqueen.com/themes/kleo/forums/forum/design-with-pleasure/">Design with pleasure</a></li>
-                                            <li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-439"><a title="Web Design Jobs &amp; Developer Jobs" href="http://seventhqueen.com/themes/kleo/forums/forum/web-design-jobs-developer-jobs/">Web Design Jobs &#038; Developer Jobs</a></li>
-                                            <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-440"><a title="Web Designer Forum News" href="http://seventhqueen.com/themes/kleo/forums/forum/web-designer-forum-news/">Web Designer Forum News</a></li>
-                                            <li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-441"><a title="Web Development" href="http://seventhqueen.com/themes/kleo/forums/forum/web-development/">Web Development</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37 dropdown kleo-megamenu mega-5-cols"><a title="Features" href="#" class="js-activated">Features <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-376 dropdown-submenu"><a title="Buddypress" href="#">Buddypress <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-1667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1667"><a title="Buddypress Members" href="http://seventhqueen.com/themes/kleo/buddypress-members/">Buddypress Members</a></li>
-                                            <li id="menu-item-1666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1666"><a title="Buddypress Groups" href="http://seventhqueen.com/themes/kleo/buddypress-groups/">Buddypress Groups</a></li>
-                                            <li id="menu-item-1675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1675"><a title="Activity Stream" href="http://seventhqueen.com/themes/kleo/activity-stream-shortcode/">Activity Stream</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-78 dropdown-submenu"><a title="Membership" href="http://seventhqueen.com/themes/kleo/membership-account/">Membership <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a title="Membership Levels" href="http://seventhqueen.com/themes/kleo/membership-account/membership-levels/">Membership Levels</a></li>
-                                            <li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a title="Membership Invoice" href="http://seventhqueen.com/themes/kleo/membership-account/membership-invoice/">Membership Invoice</a></li>
-                                            <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a title="Membership Confirmation" href="http://seventhqueen.com/themes/kleo/membership-account/membership-confirmation/">Membership Confirmation</a></li>
-                                            <li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a title="Membership Checkout" href="http://seventhqueen.com/themes/kleo/membership-account/membership-checkout/">Membership Checkout</a></li>
-                                            <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a title="Membership Cancel" href="http://seventhqueen.com/themes/kleo/membership-account/membership-cancel/">Membership Cancel</a></li>
-                                            <li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a title="Membership Billing" href="http://seventhqueen.com/themes/kleo/membership-account/membership-billing/">Membership Billing</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-192 dropdown-submenu"><a title="Page Layouts" href="#">Page Layouts <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a title="Full Width Template" href="http://seventhqueen.com/themes/kleo/full-width-template/">Full Width Template</a></li>
-                                            <li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a title="Left Sidebar Template" href="http://seventhqueen.com/themes/kleo/left-sidebar-template/">Left Sidebar Template</a></li>
-                                            <li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341"><a title="Right Sidebar Template" href="http://seventhqueen.com/themes/kleo/right-sidebar-template/">Right Sidebar Template</a></li>
-                                            <li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a title="3 Colums Template" href="http://seventhqueen.com/themes/kleo/3-colums-template/">3 Colums Template</a></li>
-                                            <li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198"><a title="Two Left Sidebars" href="http://seventhqueen.com/themes/kleo/two-left-sidebars/">Two Left Sidebars</a></li>
-                                            <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a title="Two Right Sidebars" href="http://seventhqueen.com/themes/kleo/two-right-sidebars/">Two Right Sidebars</a></li>
-                                            <li id="menu-item-518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a title="No Breadcrumb Page" href="http://seventhqueen.com/themes/kleo/no-breadcrumb-page/">No Breadcrumb Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-361 dropdown-submenu"><a title="Shortcode Elements" href="#">Shortcode Elements <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a title="Feature Items" href="http://seventhqueen.com/themes/kleo/feature-items/">Feature Items</a></li>
-                                            <li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674"><a title="Accordion &amp; Toggle" href="http://seventhqueen.com/themes/kleo/accordion-toggle/">Accordion &#038; Toggle</a></li>
-                                            <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a title="Buttons" href="http://seventhqueen.com/themes/kleo/buttons/">Buttons</a></li>
-                                            <li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a title="Dividers" href="http://seventhqueen.com/themes/kleo/dividers/">Dividers</a></li>
-                                            <li id="menu-item-687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-687"><a title="Poi &amp; Pins" href="http://seventhqueen.com/themes/kleo/poi-pins/">Poi &#038; Pins</a></li>
-                                            <li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a title="Tabs &amp; Pills" href="http://seventhqueen.com/themes/kleo/tabs-pills/">Tabs &#038; Pills</a></li>
-                                            <li id="menu-item-704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-704"><a title="Tooltips &amp; Popovers" href="http://seventhqueen.com/themes/kleo/tooltips-popovers/">Tooltips &#038; Popovers</a></li>
-                                            <li id="menu-item-530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-530"><a class="disabled" href="http://seventhqueen.com/themes/kleo/feature-items">More →</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-662" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-662 dropdown-submenu"><a title="Pages" href="#">Pages <span class="caret"></span></a>
-                                        <ul role="menu" class="dropdown-menu sub-menu">
-                                            <li id="menu-item-1224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a title="Shop" href="http://seventhqueen.com/themes/kleo/default-shop">Shop</a></li>
-                                            <li id="menu-item-363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a title="Contact us" href="http://seventhqueen.com/themes/kleo/contact/">Contact us</a></li>
-                                            <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a title="404 Page" href="http://seventhqueen.com/themes/kleo/404-page/">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-4382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4382 dropdown mega-3-cols"><a title="Blog" href="#" class="js-activated">Blog <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a title="Blog Masonry" href="http://seventhqueen.com/themes/kleo/blog/">Blog Masonry</a></li>
-                                    <li id="menu-item-4744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4744"><a title="Blog Left Thumb NEW" href="http://seventhqueen.com/themes/kleo/blog-left-thumb/">Blog Left Thumb <em>NEW</em></a></li>
-                                    <li id="menu-item-4381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4381"><a title="Blog Normal" href="http://seventhqueen.com/themes/kleo/blog-normal/">Blog Normal</a></li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-3931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3931 dropdown mega-14-cols"><a title="Portfolio" href="http://seventhqueen.com/themes/kleo/portfolio/" class="js-activated">Portfolio <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-3945" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3945"><a title="Portfolio Fullwidth Overlay NEW" href="http://seventhqueen.com/themes/kleo/portfolio-full-width/">Portfolio Fullwidth Overlay <em>NEW</em></a></li>
-                                    <li id="menu-item-3932" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3932"><a title="Portfolio With Grid Images V2 NEW" href="http://seventhqueen.com/themes/kleo/portfolio/portfolio-grid-images-v2/">Portfolio With Grid Images V2 <em>NEW</em></a></li>
-                                    <li id="menu-item-3935" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3935"><a title="Portfolio With Grid Images V1" href="http://seventhqueen.com/themes/kleo/portfolio/portfolio-grid-images-v1/">Portfolio With Grid Images V1</a></li>
-                                    <li id="menu-item-3933" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3933"><a title="Portfolio With Sidebar" href="http://seventhqueen.com/themes/kleo/portfolio/portfolio-sidebar/">Portfolio With Sidebar</a></li>
-                                    <li id="menu-item-3934" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3934"><a title="Portfolio With Carousel Images" href="http://seventhqueen.com/themes/kleo/portfolio/portfolio-carousel-images/">Portfolio With Carousel Images</a></li>
-                                    <li id="menu-item-3936" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3936"><a title="Single Image Lightbox" href="http://seventhqueen.com/themes/kleo/portfolio/single-image-lightbox/">Single Image Lightbox</a></li>
-                                    <li id="menu-item-3938" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3938"><a title="Embed Vimeo Full Width" href="http://seventhqueen.com/themes/kleo/portfolio/embed-vimeo-full-width/">Embed Vimeo Full Width</a></li>
-                                    <li id="menu-item-3939" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3939"><a title="Embed YouTube Full Width" href="http://seventhqueen.com/themes/kleo/portfolio/embed-video-full-width/">Embed YouTube Full Width</a></li>
-                                    <li id="menu-item-3941" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3941"><a title="Hosted Video Full Width" href="http://seventhqueen.com/themes/kleo/portfolio/hosted-video-full-width/">Hosted Video Full Width</a></li>
-                                    <li id="menu-item-3937" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3937"><a title="Video Background Header NEW" href="http://seventhqueen.com/themes/kleo/portfolio/video-background-header/">Video Background Header <em>NEW</em></a></li>
-                                    <li id="menu-item-3940" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3940"><a title="Portfolio With Slider" href="http://seventhqueen.com/themes/kleo/portfolio/portfolio-slider/">Portfolio With Slider</a></li>
-                                    <li id="menu-item-3942" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3942"><a title="Gallery with thumbs" href="http://seventhqueen.com/themes/kleo/portfolio/gallery-thumbs/">Gallery with thumbs</a></li>
-                                    <li id="menu-item-3943" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3943"><a title="Image Full Width Header" href="http://seventhqueen.com/themes/kleo/portfolio/image-full-width/">Image Full Width Header</a></li>
-                                    <li id="menu-item-3944" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3944"><a title="General Portfolio Content" href="http://seventhqueen.com/themes/kleo/portfolio/general-portfolio-content/">General Portfolio Content</a></li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-4045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4045"><a class="btn-buy" href="http://themeforest.net/item/kleo-next-level-premium-wordpress-theme/6776630?ref=SeventhQueen">Buy Theme</a></li>
-                            <li id="menu-item-2181" class="kleo-menu kleo-user_avatar-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2181 dropdown mega-6-cols"><a title="My Account" href="#" class="js-activated">My Account <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu sub-menu pull-left">
-                                    <li id="menu-item-4512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4512"></li>
-                                    <li id="menu-item-4502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4502"></li>
-                                    <li id="menu-item-4529" class="kleo-show-login menu-item menu-item-type-custom menu-item-object-custom menu-item-4529"><a title="Login" href="http://seventhqueen.com/themes/kleo/wp-login.php">Login</a></li>
-                                    <li id="menu-item-4531" class="kleo-menu kleo-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-4531"><a title="Register" href="http://seventhqueen.com/themes/kleo/wp-login.php?action=register">Register</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item kleo-toggle-menu shop-drop"><a class="cart-contents" href="http://seventhqueen.com/themes/kleo/cart/" title="View Cart" style="line-height: normal;"><span class="cart-items"><i class="icon icon-basket-full-alt"></i> </span> <span class="caret"></span></a><ul class="kleo-toggle-submenu"><li><div class="kleo-minicart"><div class="minicart-header">Your shopping bag is empty.</div><div class="minicart-buttons"><a class="btn btn-default kleo-go-shop" href="http://seventhqueen.com/themes/kleo/shop/"><span class="text">Go to the shop</span></a></div></div></li></ul></li><li id="nav-menu-item-search" class="menu-item kleo-search-nav">    <a class="search-trigger" href="#"><i class="icon icon-search"></i></a>
-                                <div class="kleo-search-wrap searchHidden" id="ajax_search_container">
-                                    <form class="form-inline" id="ajax_searchform" action="http://seventhqueen.com/themes/kleo/" data-context="">
-                                        <input name="s" class="ajax_s form-control" autocomplete="off" type="text" value="" placeholder="Start typing to search...">
-                                        <span class="kleo-ajax-search-loading"><i class="icon-spin6 animate-spin"></i></span>
-                                    </form>
-                                    <div class="kleo_ajax_results"></div>
-                                </div>
-
-                            </li><li id="nav-menu-item-side" class="menu-item"><a href="#" class="open-sidebar" onclick="javascript:return false;"><i class="icon-menu"></i></a></li></ul></div>				</div><!--end container-->
-            </div>
-
-        </div>
-
-    </div><!--end header-->
+    <% include ../partials/header%>
+    <!--end header-->
     <!-- MAIN SECTION
     ================================================ -->
     <div id="main">
@@ -230,41 +52,19 @@
             <div id="item-header" role="complementary">
 
 
-                <div id="profile-cover"></div> <!--- #profile-cover ---><div class="profile-cover-inner"></div>	<span class="toggle-header">
-	<span class="bp-toggle-less">show less</span>
-	<span class="bp-toggle-more">show more</span>
-</span>
-
+	            <div class="profile-cover-action"><a href="http://seventhqueen.com/themes/kleo/members/demo/profile/change-cover/" class="button">Change Cover</a></div><div class="profile-cover-inner"></div>
                 <div id="item-header-avatar" class="rounded">
                     <a href="http://seventhqueen.com/themes/kleo/members/demo/">
 
-                        <img src="../../../wp-content/uploads/avatars/35231/7859f040cc491fdc0129b7ff1a733d43-bpfull.jpg" class="avatar user-35231-avatar avatar-150 photo" width="150" height="150" alt="Profile picture of Raffaeleo" />
+                        <img src="http://seventhqueen.com/themes/kleo/wp-content/uploads/avatars/35231/fe1a940917f4eaa94e2279830d730439-bpfull.jpg" class="avatar user-35231-avatar avatar-150 photo" width="150" height="150" alt="Profile picture of Lennon Mendonça" />
                     </a>
                     <span class="kleo-online-status high-bg"></span></div><!-- #item-header-avatar -->
 
                 <div id="item-header-content" >
 
-                    <h4 class="user-nicename">@demo</h4>
-
-                    <span class="activity">active 1 minute ago</span>
-
-
-                    <div id="item-meta">
-
-
-                        <div id="latest-update">
-
-                            Hi world! <img src="../../../wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> <a href="http://seventhqueen.com/themes/kleo/activity/p/79613/" rel="nofollow">View</a>
-                        </div>
-
-
-                        <div id="item-buttons">
-
-
-                        </div><!-- #item-buttons -->
-
-
-                    </div><!-- #item-meta -->
+                    <h4 class="user-nicename">@pseudo</h4>
+                    <br>
+                    <span class="activity">BADGE: Exemple badge</span>
 
                 </div><!-- #item-header-content -->
 
@@ -295,19 +95,9 @@
 
 
 
-
-                                                <div class="col-sm-12">
-                                                    <div id="item-nav">
-                                                        <div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
-                                                            <ul class="responsive-tabs">
-                                                                <li id="activity-personal-li" ><a id="user-activity" href="http://seventhqueen.com/themes/kleo/members/demo/activity/">Activity</a></li><li id="xprofile-personal-li"  class="current selected"><a id="user-xprofile" href="index.html">Profile</a></li><li id="blogs-personal-li" ><a id="user-blogs" href="http://seventhqueen.com/themes/kleo/members/demo/blogs/">Sites <span>1</span></a></li><li id="friends-personal-li" ><a id="user-friends" href="http://seventhqueen.com/themes/kleo/members/demo/friends/">Friends <span class="count">49</span></a></li><li id="groups-personal-li" ><a id="user-groups" href="http://seventhqueen.com/themes/kleo/members/demo/groups/">Groups <span class="count">29</span></a></li><li id="forums-personal-li" ><a id="user-forums" href="http://seventhqueen.com/themes/kleo/members/demo/forums/">Forums</a></li><li id="media-personal-li" ><a id="user-media" href="http://seventhqueen.com/themes/kleo/members/demo/media/">Media<span>148</span></a></li><li id="articles-personal-li" ><a id="user-articles" href="http://seventhqueen.com/themes/kleo/members/demo/articles/">My articles</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <!-- #item-nav -->
-                                                </div>
-
+                                                <!-- MENU PROFILE
+                                                   ================================================ -->
+                                                <% include ../partials/menu-profile %>
 
                                                 <div id="item-body" role="main" class="col-sm-12">
 
@@ -315,7 +105,7 @@
 
                                                     <div class="item-list-tabs no-ajax" id="subnav" role="navigation">
                                                         <ul>
-                                                            <li id="public-personal-li"  class="current selected"><a id="public" href="index.html">View</a></li>	</ul>
+                                                            <li id="public-personal-li"  class="current selected"><a id="public" href="http://seventhqueen.com/themes/kleo/members/demo/profile/">View</a></li><li id="edit-personal-li" ><a id="edit" href="http://seventhqueen.com/themes/kleo/members/demo/profile/edit/">Edit</a></li><li id="change-avatar-personal-li" ><a id="change-avatar" href="http://seventhqueen.com/themes/kleo/members/demo/profile/change-avatar/">Change Profile Photo</a></li><li id="change-cover-personal-li" ><a id="change-cover" href="http://seventhqueen.com/themes/kleo/members/demo/profile/change-cover/">Change Cover</a></li>	</ul>
                                                     </div><!-- .item-list-tabs -->
 
 
@@ -337,7 +127,7 @@
 
                                                             <dl class="dl-horizontal field_1 field_name required-field visibility-public field_type_textbox">
                                                                 <dt>Name</dt>
-                                                                <dd><p><a href="http://seventhqueen.com/themes/kleo/members/?s=Raffaeleo" rel="nofollow">Raffaeleo</a></p>
+                                                                <dd><p><a href="http://seventhqueen.com/themes/kleo/members/?s=Lennon+Mendon%C3%A7a" rel="nofollow">Lennon Mendonça</a></p>
                                                                 </dd>
                                                             </dl>
 
@@ -350,7 +140,7 @@
 
                                                             <dl class="dl-horizontal field_2 field_my-quote optional-field visibility-public alt field_type_textbox">
                                                                 <dt>My Quote</dt>
-                                                                <dd><p>I covet beautiful things. What do you covet? #icovet</p>
+                                                                <dd><p><a href="http://seventhqueen.com/themes/kleo/members/?s=I+love+creating+websites%21%21%21%21" rel="nofollow">I love creating websites!!!!</a></p>
                                                                 </dd>
                                                             </dl>
 
@@ -473,26 +263,6 @@
 
                                                     </div><!-- .profile -->
 
-                                                    <nav class="pagination-sticky members-navigation" role="navigation">
-
-                                                        <a rel="prev" href="http://seventhqueen.com/themes/kleo/members/eduart-milushi/" title="">
-					<span id="older-nav">
-						<span class="nav-image"><img src='https://graph.facebook.com/10204603247183716/picture?width=580&amp;height=580' class="avatar user-35230-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" /></span>
-						<span class="outter-title"><span class="entry-title">Eduart Milushi</span>
-						</span>
-					</span>
-                                                        </a>
-
-
-                                                        <a rel="next" href="http://seventhqueen.com/themes/kleo/members/duygulu-tarifler-mutfagi/" title="">
-				<span id="newer-nav">
-					<span class="nav-image"><img src='https://graph.facebook.com/1547557828796754/picture?width=580&amp;height=580' class="avatar user-35232-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" /></span>
-					<span class="outter-title"><span class="entry-title">Duygu&#039;lu Tarifler Mutfağı</span></span>
-				</span>
-                                                        </a>
-
-                                                    </nav><!-- .navigation -->
-
                                                 </div>
                                                 <!-- #item-body -->
 
@@ -515,218 +285,7 @@
                         </div><!--end wrap-content-->
                     </div><!--end main-page-template-->
 
-                    <div class="sidebar sidebar-main col-sm-3 sidebar-right">
-                        <div class="inner-content widgets-container">
-                            <div id="bp_core_login_widget-2" class="widget widget_bp_core_login_widget buddypress widget"><h4 class="widget-title"></h4>
-
-                                <div class="kleo-fb-wrapper text-center">
-                                    <a href="#" class="kleo-facebook-connect btn btn-default "><i class="icon-facebook"></i> &nbsp;Log in with Facebook</a>
-                                </div>
-                                <div class="gap-20"></div>
-                                <div class="hr-title hr-full"><abbr> or </abbr></div>
-                                <span style="margin-bottom: 10px;display:inline-block;">User: demo Password: demo</span>
-                                <form name="bp-login-form" id="bp-login-widget-form" class="standard-form" action="http://seventhqueen.com/themes/kleo/wp-login.php" method="post">
-                                    <label for="bp-login-widget-user-login">Username</label>
-                                    <input type="text" name="log" id="bp-login-widget-user-login" class="input" value="" />
-
-                                    <label for="bp-login-widget-user-pass">Password</label>
-                                    <input type="password" name="pwd" id="bp-login-widget-user-pass" class="input" value=""  />
-
-                                    <div class="forgetmenot"><label><input name="rememberme" type="checkbox" id="bp-login-widget-rememberme" value="forever" /> Remember Me</label></div>
-
-                                    <input type="submit" name="wp-submit" id="bp-login-widget-submit" value="Log In" />
-
-
-                                    <span class="bp-login-widget-register-link"><a href="http://seventhqueen.com/themes/kleo/register/" title="Register for a new account">Register</a></span>
-
-
-                                </form>
-
-
-                            </div><div id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" action="http://seventhqueen.com/themes/kleo/">
-
-                                    <div class="input-group">
-                                        <input name="s" id="s" autocomplete="off" type="text" class="ajax_s form-control input-sm" value="">
-		<span class="input-group-btn">
-            <input type="submit" value="Search" id="searchsubmit" class="button">
-		</span>
-                                    </div>
-
-                                </form></div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widget-title">Recent Posts</h4>		<ul>
-                                    <li>
-                                        <a href="http://seventhqueen.com/themes/kleo/uncategorized/interior-design/">Interior design</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://seventhqueen.com/themes/kleo/courses/communication-information/">Communication and information</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://seventhqueen.com/themes/kleo/thoughts/things/">Doing things</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://seventhqueen.com/themes/kleo/courses/creativity-innovation/">Creativity and Innovation</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://seventhqueen.com/themes/kleo/courses/marketing-management-2/">UX Design</a>
-                                    </li>
-                                </ul>
-                            </div><div id="bp_core_recently_active_widget-2" class="widget widget_bp_core_recently_active_widget buddypress widget"><h4 class="widget-title">Recently Active Members</h4>
-                                <div class="avatar-block">
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/demo/" title="Raffaeleo"><img src="../../../wp-content/uploads/avatars/35231/7859f040cc491fdc0129b7ff1a733d43-bpthumb.jpg" class="avatar user-35231-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Raffaeleo" /></a>
-                                    </div>
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/artof-ke/" title="Artof KE"><img src='https://graph.facebook.com/1404061383233269/picture?width=580&amp;height=580' class="avatar user-36376-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Artof KE" /></a>
-                                    </div>
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/engin-canberg/" title="Engin Canberg"><img src='https://graph.facebook.com/10155231390845710/picture?width=580&amp;height=580' class="avatar user-36375-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Engin Canberg" /></a>
-                                    </div>
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/niranjan-kumar/" title="Niranjan Kumar"><img src='https://graph.facebook.com/10202500635717427/picture?width=580&amp;height=580' class="avatar user-36374-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Niranjan Kumar" /></a>
-                                    </div>
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/frans-hanyane/" title="Luke Skywalker"><img src="../../../wp-content/uploads/avatars/36248/3608aeef7f03f78611d35b3708158461-bpthumb.jpg" class="avatar user-36248-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Luke Skywalker" /></a>
-                                    </div>
-                                    <div class="item-avatar">
-                                        <a href="http://seventhqueen.com/themes/kleo/members/christine-ruttka/" title="Christine Ruttka"><img src='https://graph.facebook.com/1084215538270690/picture?width=580&amp;height=580' class="avatar user-36361-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Christine Ruttka" /></a>
-                                    </div>
-                                </div>
-
-                            </div>	<div id="bbp_forums_widget-2" class="widget widget_display_forums"><h4 class="widget-title">Forums</h4>
-                                <ul>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/forums/forum/design-with-pleasure/">Design with pleasure</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/forums/forum/group-testing/">Group Testing</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/groups/gladiator/forum/">Upcomming Features</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/forums/forum/web-design-jobs-developer-jobs/">Web Design Jobs &#038; Developer Jobs</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/forums/forum/web-designer-forum-news/">Web Designer Forum News</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/forums/forum/web-development/">Web Development</a></li>
-
-
-                                    <li><a class="bbp-forum-title" href="http://seventhqueen.com/themes/kleo/groups/youth-team/forum/">Youth Team</a></li>
-
-
-                                </ul>
-
-                            </div><div id="bp_groups_widget-2" class="widget widget_bp_groups_widget buddypress widget"><h4 class="widget-title">Groups</h4>
-                                <div class="item-options" id="groups-list-options">
-                                    <a href="http://seventhqueen.com/themes/kleo/groups/" id="newest-groups">Newest</a> |
-                                    <a href="http://seventhqueen.com/themes/kleo/groups/" id="recently-active-groups" class="selected">Active</a> |
-                                    <a href="http://seventhqueen.com/themes/kleo/groups/" id="popular-groups" >Popular</a>
-                                </div>
-
-                                <ul id="groups-list" class="item-list">
-                                    <li class="odd public">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/groups/what-is-the-most-effective-low-priced-golf-rangefinder/" title="What Is The Most effective Low-priced Golf Rangefinder"><img src='https://graph.facebook.com/760361507317894/picture?width=580&amp;height=580' class="avatar group-12482-avatar avatar-50 photo" width="50" height="50" alt="Group logo of What Is The Most effective Low-priced Golf Rangefinder" title="What Is The Most effective Low-priced Golf Rangefinder" /></a>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="item-title"><a href="http://seventhqueen.com/themes/kleo/groups/what-is-the-most-effective-low-priced-golf-rangefinder/" title="What Is The Most effective Low-priced Golf Rangefinder">What Is The Most effective Low-priced Golf Rangefinder</a></div>
-                                            <div class="item-meta">
-								<span class="activity">
-								active 49 minutes ago								</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="even public">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/groups/the-social-network/" title="The Social Network"><img src="../../../wp-content/uploads/group-avatars/31/6faaf07a396eb4a0413ea28404f793a1-bpthumb.jpg" class="avatar group-31-avatar avatar-50 photo" width="50" height="50" alt="Group logo of The Social Network" title="The Social Network" /></a>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="item-title"><a href="http://seventhqueen.com/themes/kleo/groups/the-social-network/" title="The Social Network">The Social Network</a></div>
-                                            <div class="item-meta">
-								<span class="activity">
-								active 2 hours, 38 minutes ago								</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="odd private">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/groups/gladiator/" title="Gladiator"><img src="../../../wp-content/uploads/group-avatars/26/5a764b1d86d9694baa3743d4978dd981-bpthumb.jpg" class="avatar group-26-avatar avatar-50 photo" width="50" height="50" alt="Group logo of Gladiator" title="Gladiator" /></a>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="item-title"><a href="http://seventhqueen.com/themes/kleo/groups/gladiator/" title="Gladiator">Gladiator</a></div>
-                                            <div class="item-meta">
-								<span class="activity">
-								active 10 hours, 28 minutes ago								</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="even public">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/groups/youth-team/" title="Youth Team"><img src="../../../wp-content/uploads/group-avatars/84/743f80e311370cfdc222f6fa6b69f7fd-bpthumb.jpg" class="avatar group-84-avatar avatar-50 photo" width="50" height="50" alt="Group logo of Youth Team" title="Youth Team" /></a>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="item-title"><a href="http://seventhqueen.com/themes/kleo/groups/youth-team/" title="Youth Team">Youth Team</a></div>
-                                            <div class="item-meta">
-								<span class="activity">
-								active 11 hours, 54 minutes ago								</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="odd public">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/groups/blade-runner/" title="Blade Runner"><img src="http://gravatar.com/avatar/57bb5963db4ba0bcbb07521f8965fb48?d=mm&amp;s=50&amp;r=G" class="avatar group-28-avatar avatar-50 photo" width="50" height="50" alt="Group logo of Blade Runner" title="Blade Runner" /></a>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="item-title"><a href="http://seventhqueen.com/themes/kleo/groups/blade-runner/" title="Blade Runner">Blade Runner</a></div>
-                                            <div class="item-meta">
-								<span class="activity">
-								active 23 hours, 36 minutes ago								</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <input type="hidden" id="_wpnonce-groups" name="_wpnonce-groups" value="3557a7286e" /><input type="hidden" name="_wp_http_referer" value="/themes/kleo/members/demo/profile/" />			<input type="hidden" name="groups_widget_max" id="groups_widget_max" value="5" />
-
-
-                            </div>	<div id="text-2" class="widget widget_text"><h4 class="widget-title">The standard Lorem Ipsum passage, used since the 1500s</h4>			<div class="textwidget">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                            </div><div id="categories-3" class="widget widget_categories"><h4 class="widget-title">Categories</h4><select name='cat' id='cat' class='postform' >
-                                    <option value='-1'>Select Category</option>
-                                    <option class="level-0" value="90">Courses</option>
-                                    <option class="level-0" value="20">Events</option>
-                                    <option class="level-0" value="6">Showcase</option>
-                                    <option class="level-0" value="7">Thoughts</option>
-                                    <option class="level-0" value="1">Uncategorized</option>
-                                </select>
-
-                                <script type='text/javascript'>
-                                    /* <![CDATA[ */
-                                    var dropdown = document.getElementById("cat");
-                                    function onCatChange() {
-                                        if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
-                                            location.href = "http://seventhqueen.com/themes/kleo/?cat="+dropdown.options[dropdown.selectedIndex].value;
-                                        }
-                                    }
-                                    dropdown.onchange = onCatChange;
-                                    /* ]]> */
-                                </script>
-
-                            </div><div id="tag_cloud-2" class="widget widget_tag_cloud"><h4 class="widget-title">Tags</h4><div class="tagcloud"><a href='http://seventhqueen.com/themes/kleo/tag/awesome/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>Awesome</a>
-                                    <a href='http://seventhqueen.com/themes/kleo/tag/business/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>Business</a>
-                                    <a href='http://seventhqueen.com/themes/kleo/tag/design/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Design</a></div>
-                            </div>	</div><!--end inner-content-->
-                    </div><!--end sidebar-->
+                <% include ../partials/sidebar-profile %>
 
                 </div><!--end .row-->		</div><!--end .container-->
 
@@ -736,157 +295,32 @@
 
     </div><!-- #main -->
 
-
-    <div id="footer" class="footer-color border-top">
-        <div class="container">
-            <div class="template-page tpl-no">
-                <div class="wrap-content">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div id="footer-sidebar-1" class="footer-sidebar widget-area" role="complementary">
-                                <div id="text-3" class="widget widget_text"><h4 class="widget-title">About us</h4>			<div class="textwidget"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
-                                </div><div id="bp_core_recently_active_widget-3" class="widget widget_bp_core_recently_active_widget buddypress widget"><h4 class="widget-title">Recently Active Members</h4>
-                                    <div class="avatar-block">
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/demo/" title="Raffaeleo"><img src="../../../wp-content/uploads/avatars/35231/7859f040cc491fdc0129b7ff1a733d43-bpthumb.jpg" class="avatar user-35231-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Raffaeleo" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/artof-ke/" title="Artof KE"><img src='https://graph.facebook.com/1404061383233269/picture?width=580&amp;height=580' class="avatar user-36376-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Artof KE" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/engin-canberg/" title="Engin Canberg"><img src='https://graph.facebook.com/10155231390845710/picture?width=580&amp;height=580' class="avatar user-36375-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Engin Canberg" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/niranjan-kumar/" title="Niranjan Kumar"><img src='https://graph.facebook.com/10202500635717427/picture?width=580&amp;height=580' class="avatar user-36374-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Niranjan Kumar" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/frans-hanyane/" title="Luke Skywalker"><img src="../../../wp-content/uploads/avatars/36248/3608aeef7f03f78611d35b3708158461-bpthumb.jpg" class="avatar user-36248-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Luke Skywalker" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/christine-ruttka/" title="Christine Ruttka"><img src='https://graph.facebook.com/1084215538270690/picture?width=580&amp;height=580' class="avatar user-36361-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Christine Ruttka" /></a>
-                                        </div>
-                                        <div class="item-avatar">
-                                            <a href="http://seventhqueen.com/themes/kleo/members/christopher-shifflett/" title="Christopher Shifflett"><img src='https://graph.facebook.com/10204865085639914/picture?width=580&amp;height=580' class="avatar user-36099-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Christopher Shifflett" /></a>
-                                        </div>
-                                    </div>
-
-                                </div>	<div id="text-4" class="widget widget_text">			<div class="textwidget"><a class="btn btn-default btn-app" href="#"><i class="icon-mobile"></i> <small>App button example</small><span>Download now</span></a></div>
-                                </div>						</div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div id="footer-sidebar-2" class="footer-sidebar widget-area" role="complementary">
-                                <div id="categories-4" class="widget widget_categories"><h4 class="widget-title">Categories</h4>		<ul>
-                                        <li class="cat-item cat-item-90"><a href="http://seventhqueen.com/themes/kleo/category/courses/" >Courses</a>
-                                        </li>
-                                        <li class="cat-item cat-item-20"><a href="http://seventhqueen.com/themes/kleo/category/events/" >Events</a>
-                                        </li>
-                                        <li class="cat-item cat-item-6"><a href="http://seventhqueen.com/themes/kleo/category/showcase/" >Showcase</a>
-                                        </li>
-                                        <li class="cat-item cat-item-7"><a href="http://seventhqueen.com/themes/kleo/category/thoughts/" >Thoughts</a>
-                                        </li>
-                                        <li class="cat-item cat-item-1"><a href="http://seventhqueen.com/themes/kleo/category/uncategorized/" >Uncategorized</a>
-                                        </li>
-                                    </ul>
-                                </div><div id="archives-2" class="widget widget_archive"><h4 class="widget-title">Archives</h4>		<ul>
-                                        <li><a href='http://seventhqueen.com/themes/kleo/2014/09/'>September 2014</a></li>
-                                        <li><a href='http://seventhqueen.com/themes/kleo/2014/05/'>May 2014</a></li>
-                                        <li><a href='http://seventhqueen.com/themes/kleo/2014/02/'>February 2014</a></li>
-                                    </ul>
-                                </div>						</div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div id="footer-sidebar-3" class="footer-sidebar widget-area" role="complementary">
-                                <div id="rss-2" class="widget widget_rss"><h4 class="widget-title"><a class='rsswidget' href='http://themeshaper.com/feed'><img style='border:0' width='14' height='14' src='../../../wp-includes/images/rss.png' alt='RSS' /></a> <a class='rsswidget' href='http://themeshaper.com/'>ThemeShaper</a></h4><ul><li><a class='rsswidget' href='http://themeshaper.com/2015/02/18/sela/'>Sela Puts a Vibrant Spin on the Business Theme</a> <span class="rss-date">February 18, 2015</span><div class="rssSummary">Designed by Automattic’s Ola Laczek, Sela puts a vibrant spin on the business theme and is now available for download … Continue reading →</div> <cite>Kathryn P.</cite></li></ul></div><div id="tag_cloud-3" class="widget widget_tag_cloud"><h4 class="widget-title">Tags</h4><div class="tagcloud"><a href='http://seventhqueen.com/themes/kleo/tag/awesome/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>Awesome</a>
-                                        <a href='http://seventhqueen.com/themes/kleo/tag/business/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>Business</a>
-                                        <a href='http://seventhqueen.com/themes/kleo/tag/design/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Design</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div id="footer-sidebar-4" class="footer-sidebar widget-area" role="complementary">
-                                <div id="item_likes_widget-2" class="widget widget_item_likes_widget"><h4 class="widget-title">Popular Posts</h4><ul class="popular-posts"><li><a href="http://seventhqueen.com/themes/kleo/courses/communication-information/">Communication and information</a> <span class='item-likes-count'>(412)</span></li><li><a href="http://seventhqueen.com/themes/kleo/thoughts/my-daily-blog-entry-2/">My daily blog entry</a> <span class='item-likes-count'>(275)</span></li><li><a href="http://seventhqueen.com/themes/kleo/uncategorized/unrevealed-shortcodes/">Unrevealed Shortcodes</a> <span class='item-likes-count'>(259)</span></li><li><a href="http://seventhqueen.com/themes/kleo/showcase/developing-with-pleasure/">Developing with pleasure</a> <span class='item-likes-count'>(224)</span></li><li><a href="http://seventhqueen.com/themes/kleo/showcase/beautiful-image-post/">Beautiful Image Post</a> <span class='item-likes-count'>(204)</span></li></ul></div>		<div id="recent-posts-4" class="widget widget_recent_entries">		<h4 class="widget-title">Recents posts</h4>		<ul>
-                                        <li>
-                                            <a href="http://seventhqueen.com/themes/kleo/uncategorized/interior-design/">Interior design</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://seventhqueen.com/themes/kleo/courses/communication-information/">Communication and information</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://seventhqueen.com/themes/kleo/thoughts/things/">Doing things</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://seventhqueen.com/themes/kleo/courses/creativity-innovation/">Creativity and Innovation</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://seventhqueen.com/themes/kleo/courses/marketing-management-2/">UX Design</a>
-                                        </li>
-                                    </ul>
-                                </div>						</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- #footer -->
-
     <a class="kleo-go-top" href="#"><i class="icon-up-open-big"></i></a>
-    <div class="kleo-quick-contact-wrapper"><a class="kleo-quick-contact-link" href="#"><i class="icon-mail-alt"></i></a><div id="kleo-quick-contact"><h4 class="kleo-qc-title">CONTACT US</h4><p>We're not around right now. But you can send us an email and we'll get back to you, asap.</p><form class="kleo-contact-form" action="#" method="post" novalidate><input type="text" placeholder="Your Name" required id="contact_name" name="contact_name" class="form-control" value="" tabindex="276" /><input type="email" required placeholder="Your Email" id="contact_email" name="contact_email" class="form-control" value="" tabindex="277"  /><textarea placeholder="Type your message..." required id="contact_content" name="contact_content" class="form-control" tabindex="278"></textarea><input type="hidden" name="action" value="kleo_sendmail"><button tabindex="279" class="btn btn-default pull-right" type="submit">Send</button><div class="kleo-contact-loading">Sending <i class="icon-spinner icon-spin icon-large"></i></div><div class="kleo-contact-success"> </div></form><div class="bottom-arrow"></div></div></div><!--end kleo-quick-contact-wrapper-->
-    <!-- SOCKET SECTION
+    <!-- FOOTER SECTION
     ================================================ -->
+    <% include ../partials/footer %>
 
-    <div id="socket" class="socket-color">
-        <div class="container">
-            <div class="template-page tpl-no col-xs-12 col-sm-12">
-                <div class="wrap-content">
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="gap-10"></div>
-                        </div><!--end widget-->
-
-                        <div class="col-sm-12">
-                            <p style="text-align: center;"><strong>©2015 KLEO Template</strong> a premium and multipurpose theme from <a href="http://www.seventhqueen.com/" target="_blank">Seven<sup>th</sup> Queen</a></p>							</div>
-
-                        <div class="col-sm-12">
-                            <div class="gap-10"></div>
-                        </div><!--end widget-->
-                    </div><!--end row-->
-
-                </div><!--end wrap-content-->
-            </div><!--end template-page-->
-        </div><!--end container-->
-    </div><!--end footer-->
 </div><!-- #page -->
 
-<div class="offcanvas-sidebar side-color"><div class="wrap-canvas-menu"><div class="offcanvas-title"><a href="#" class="open-sidebar"></a></div><div class="offcanvas-before">Choose from the demos we created for you.</div><div class="widget_nav_menu"><ul id="menu-demos" class="offcanvas-menu"><li id="menu-item-4888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4888"><a title="Happy New Year NEW" href="http://seventhqueen.com/themes/kleo/merry-christmas-happy-new-year/">Happy New Year <em>NEW</em></a></li>
-                <li id="menu-item-4889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4889"><a title="Merry Christmas NEW" href="http://seventhqueen.com/themes/kleo/merry-christmas/">Merry Christmas <em>NEW</em></a></li>
-                <li id="menu-item-4701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4701"><a title="Black Friday" href="http://seventhqueen.com/themes/kleo/black-friday/">Black Friday</a></li>
-                <li id="menu-item-4703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4703"><a title="Pinterest Style HOT" href="http://seventhqueen.com/themes/kleo/pinterest/">Pinterest Style <em>HOT</em></a></li>
-                <li id="menu-item-4704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4704"><a title="Portfolio Fullwidth Overlay" href="http://seventhqueen.com/themes/kleo/portfolio-full-width/">Portfolio Fullwidth Overlay</a></li>
-                <li id="menu-item-4707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4707"><a title="Home Community" href="http://seventhqueen.com/themes/kleo/home-default/">Home Community</a></li>
-                <li id="menu-item-4705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4705"><a title="E-learning" href="http://seventhqueen.com/themes/kleo/e-learning-home/">E-learning</a></li>
-                <li id="menu-item-4706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4706"><a title="Home Shop" href="http://seventhqueen.com/themes/kleo/default-shop/">Home Shop</a></li>
-                <li id="menu-item-4702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4702"><a title="Stylish Woocommerce" href="http://seventhqueen.com/themes/kleo/stylish-woocommerce/">Stylish Woocommerce</a></li>
-                <li id="menu-item-4709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4709"><a title="Agency multisite" href="http://seventhqueen.com/themes/kleo/demo-agency">Agency <em>multisite</em></a></li>
-                <li id="menu-item-4708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4708"><a title="Home Simple" href="http://seventhqueen.com/themes/kleo/home/">Home Simple</a></li>
-            </ul></div><div class="offcanvas-after"><small>You can customize side area from admin with any content.</small>
-            <ul class="kleo-social-icons"><li><a target="_blank" href="https://twitter.com/SeventhQueen"><i class="icon-twitter"></i><div class="ts-text">Twitter</div></a></li><li><a target="_blank" href="https://www.facebook.com/seventhqueen.themes"><i class="icon-facebook"></i><div class="ts-text">Facebook</div></a></li><li><a target="_blank" href="https://dribbble.com/seventhqueen"><i class="icon-dribbble"></i><div class="ts-text">Dribbble</div></a></li><li><a target="_blank" href="https://plus.google.com/+Seventhqueen"><i class="icon-gplus"></i><div class="ts-text">Google+</div></a></li></ul></div></div></div>
-<!-- Analytics -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','../../../../../../www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-43868344-1', 'seventhqueen.com');
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-
+<!-- Facebook Conversion Code for Other Website Conversions -  Seventhqueen -->
+<script>(function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '524985230974875']);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
 </script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=524985230974875&amp;ev=PixelInitialized" /></noscript>
 
-<!-- Generated in 1.593 seconds. (206 q) -->
+<!-- Generated in 1.530 seconds. (260 q) -->
 
 <!-- Memberships powered by Paid Memberships Pro v1.7.15.2.
 -->
@@ -912,7 +346,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "../../../../../../connect.facebook.net/en_US/sdk.js";
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
@@ -970,7 +404,7 @@
                             else if( user.loggedin ) {
                                 jQuery('#kleo-login-result').html(user.message);
                                 if( user.type === 'login' ) {
-                                    if(window.location.href.indexOf("wp-login.html") > -1) {
+                                    if(window.location.href.indexOf("wp-login.php") > -1) {
                                         window.location = user.siteUrl;
                                     } else {
                                         window.location.reload();
@@ -1003,188 +437,14 @@
         }
     });
 </script>
-<script type='text/javascript' src='../../../wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min0f0c.js?rev=4.6.5'></script>
-<script type='text/javascript' src='../../../wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min0f0c.js?rev=4.6.5'></script>
-<div id="style-swicher">
-    <div class="main-title">Style Selector</div>
+<script type='text/javascript' src='http://seventhqueen.com/themes/kleo/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?rev=4.6.5'></script>
+<script type='text/javascript' src='http://seventhqueen.com/themes/kleo/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.6.5'></script>
 
-
-    <div class="tab-pane active">
-        <div data-active-tab="1" id="accordion-switch" class="panel-group panel-kleo icons-to-right">
-
-            <div class="panel">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-switch" href="#acc-sw-1">
-                            Layout
-                            <span class="icon-closed icon-plus-1 hide"></span>
-                            <span class="icon-opened icon-minus-1"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-collapse collapse in" id="acc-sw-1">
-                    <div class="panel-body">
-
-                        <div class="section-title">Layout Style</div>
-                        <div class="section-options">
-                            <select name="layout-style">
-                                <option value="wide">Wide</option>
-                                <option value="boxed">Boxed</option>
-                            </select>
-                        </div>
-
-                        <div class="boxed-dep">
-                            <div class="section-title">Boxed Background Patterns</div>
-                            <div class="section-options">
-                                <ul class="patterns">
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/black_pattern.gif"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/blue_pattern.gif"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/green_pattern.gif"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/pink_pattern.gif"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/wood.png"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/congruent_outline.png"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/stardust.png"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/kindajean.png"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/greyzz.png"></li>
-                                    <li><img alt="" src="../../../wp-content/plugins/k-style-switcher/assets/img/patterns/skulls.png"></li>
-
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-switch" href="#acc-sw-4">
-                            Header content
-                            <span class="icon-closed icon-plus-1"></span>
-                            <span class="icon-opened icon-minus-1 hide"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-collapse collapse" id="acc-sw-4">
-                    <div class="panel-body">
-
-                        <div class="section-title">Style</div>
-                        <div class="section-options">
-                            <select name="header-style">
-                                <option value="header-color">White</option>
-                                <option value="footer-color">Dark</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-switch" href="#acc-sw-2">
-                            Main content
-                            <span class="icon-closed icon-plus-1"></span>
-                            <span class="icon-opened icon-minus-1 hide"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-collapse collapse" id="acc-sw-2">
-                    <div class="panel-body">
-
-                        <div class="section-title">Style</div>
-                        <div class="section-options">
-                            <select name="main-style">
-                                <option value="main-color">White</option>
-                                <option value="footer-color">Dark</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-switch" href="#acc-sw-3">
-                            Footer content
-                            <span class="icon-closed icon-plus-1"></span>
-                            <span class="icon-opened icon-minus-1 hide"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-collapse collapse" id="acc-sw-3">
-                    <div class="panel-body">
-
-                        <div class="section-title">Style</div>
-                        <div class="section-options">
-                            <select name="footer-style">
-                                <option value="footer-color">Dark</option>
-                                <option value="main-color">White</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-            <!--
-            <div class="panel">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-switch" href="#acc-sw-3">
-                            Styling
-                            <span class="icon-closed icon-plus-1"></span>
-                            <span class="icon-opened icon-minus-1 hide"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-collapse collapse" id="acc-sw-3">
-                    <div class="panel-body">
-
-                        <div class="section-title">Colors</div>
-                        <div class="section-options">
-
-
-                            <div style="background-color:#eb005d;" data-color="#eb005d" class="color color1"><span>Magenta</span></div>
-                            <div style="background-color:#21aefe;" data-color="#21aefe" class="color color2"><span>Blue</span></div>
-                            <div style="background-color:#dbc997;" data-color="#dbc997" class="color color3"><span>Gold</span></div>
-                            <div style="background-color:#1ac2a1;" data-color="#1ac2a1" class="color color4"><span>Green</span></div>
-                            <div style="background-color:#ffa314;" data-color="#ffa314" class="color color5"><span>Yellow</span></div>
-                            <div style="background-color:#9cb1b2;" data-color="#9cb1b2" class="color color6"><span>Gray</span></div>
-                            <div class='clearfix'></div>
-
-
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-            -->
-
-        </div>
-
-    </div>
-    <div class="section-options">
-        <small>This is just a really small part of all customizations available. <a href="http://seventhqueen.com/themes/kleo/admin-features">View all</a></small>
-    </div>
-
-    <a id="toggle-section" href="#"><i class="icon icon-cog-alt"></i></a>
-</div>
 <!-- Modal Login form -->
 <div id="kleo-login-modal" class="kleo-form-modal main-color mfp-hide">
     <div class="row">
-        <div class="col-sm-12 text-center">
+
+       <div class="col-sm-12 text-center">
 
             <div class="kleo-fb-wrapper text-center">
                 <a href="#" class="kleo-facebook-connect btn btn-default "><i class="icon-facebook"></i> &nbsp;Log in with Facebook</a>
@@ -1203,7 +463,7 @@
             </div>
 
             <form action="http://seventhqueen.com/themes/kleo/wp-login.php" id="login_form" name="login_form" method="post" class="kleo-form-signin">
-                <input type="hidden" id="security" name="security" value="e56712fdef" /><input type="hidden" name="_wp_http_referer" value="/themes/kleo/members/demo/profile/" />            <input type="text" id="username" autofocus required name="log" class="form-control" value="" placeholder="Username">
+                <input type="hidden" id="security" name="security" value="12d4d05f8f" /><input type="hidden" name="_wp_http_referer" value="/themes/kleo/members/demo/profile/" />            <input type="text" id="username" autofocus required name="log" class="form-control" value="" placeholder="Username">
                 <input type="password" id="password" required value="" name="pwd" class="form-control" placeholder="Password">
                 <div id="kleo-login-result"></div>
                 <button class="btn btn-lg btn-default btn-block" type="submit">Sign in</button>
@@ -1230,8 +490,8 @@
             </div>
 
 
-            <form id="forgot_form" name="forgot_form" action="#" method="post" class="kleo-form-signin">
-                <input type="hidden" id="security" name="security" value="e56712fdef" /><input type="hidden" name="_wp_http_referer" value="/themes/kleo/members/demo/profile/" />        <input type="text" id="forgot-email" autofocus required  name="user_login" class="form-control" placeholder="Username or Email">
+            <form id="forgot_form" name="forgot_form" action="" method="post" class="kleo-form-signin">
+                <input type="hidden" id="security" name="security" value="12d4d05f8f" /><input type="hidden" name="_wp_http_referer" value="/themes/kleo/members/demo/profile/" />        <input type="text" id="forgot-email" autofocus required  name="user_login" class="form-control" placeholder="Username or Email">
                 <div id="kleo-lost-result"></div>
                 <button class="btn btn-lg btn-default btn-block" type="submit">Reset Password</button>
                 <a href="#kleo-login-modal" class="kleo-show-login kleo-other-action pull-right">I remember my details</a>
@@ -1242,11 +502,74 @@
     </div>
 </div><!-- END Modal Lost Password form -->
 
-<% include ../partials/script-register %>
+<link rel='stylesheet' id='wangguard-bp-css'  href='../../../wp-content/plugins/wangguard/css/wangguard-bpf24c.css?ver=1.6' type='text/css' media='all' />
+<script type='text/javascript' src='frontend/js/editor.js'></script>
+<script type='text/javascript' src='frontend/js/underscore.min.js'></script>
+<script type='text/javascript' src='frontend/js/backbone.min.js'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var template_url = "index.html\/\/seventhqueen.com\/themes\/kleo\/wp-admin\/admin-ajax.php?action=rtmedia_get_template&template=media-gallery-item";
+    var rtMedia_plupload_config = {"url":"\/themes\/kleo\/members\/demo\/profile\/upload\/","runtimes":"html5,flash,html4","browse_button":"rtMedia-upload-button","container":"rtmedia-upload-container","drop_element":"drag-drop-area","filters":[{"title":"Media Files","extensions":"jpg,jpeg,png,gif,mp4,mp3"}],"max_file_size":"10M","multipart":"1","urlstream_upload":"1","flash_swf_url":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-includes\/js\/plupload\/plupload.flash.swf","silverlight_xap_url":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-includes\/js\/plupload\/plupload.silverlight.xap","file_data_name":"rtmedia_file","multi_selection":"1","multipart_params":{"redirect":"no","action":"wp_handle_upload","_wp_http_referer":"\/themes\/kleo\/members\/demo\/profile\/","mode":"file_upload","rtmedia_upload_nonce":"ea1ca83418"},"max_file_size_msg":"10M"};
+    var rMedia_loading_file = "index.html\/\/seventhqueen.com\/themes\/kleo\/wp-admin\/images\/loading.gif";
+    var rMedia_loading_media = "index.html\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/buddypress-media\/app\/assets\/img\/boxspinner.gif";
+    var rtmedia_user_domain = "index.html\/\/seventhqueen.com\/themes\/kleo\/members\/demo\/media\/";
+    var rtmedia_load_more_or_pagination = "load_more";
+    var rtmedia_bp_enable_activity = "1";
+    var rtmedia_upload_progress_error_message = "There are some uploads in progress. Do you want to cancel them?";
+    /* ]]> */
+</script>
+<script type='text/javascript' src='frontend/js/rtMedia.backbone.js'></script>
+<script type='text/javascript' src='frontend/js/jquery.form.min.js'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpcf7 = {"loaderUrl":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='frontend/js/contact-form-7/scripts.js'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/k-style-switcher/assets/js/k-switcher5152.js?ver=1.0'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_add_to_cart_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/seventhqueen.com\/themes\/kleo\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+    var wc_add_to_cart_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/seventhqueen.com\/themes\/kleo\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min8ce6.js?ver=2.2.10'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minc8cb.js?ver=2.60'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var woocommerce_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+    var woocommerce_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/seventhqueen.com\/themes\/kleo\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min8ce6.js?ver=2.2.10'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.mine7f0.js?ver=1.3.1'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_cart_fragments_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+    var wc_cart_fragments_params = {"ajax_url":"\/themes\/kleo\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min8ce6.js?ver=2.2.10'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var yith_wcwl_l10n = {"out_of_stock":"Cannot add to the cart as product is Out of Stock!"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl5152.js?ver=1.0'></script>
+<script type='text/javascript' src='frontend/js/bootstrap.min1.js'></script>
+<script type='text/javascript' src='frontend/js/lib/waypoints.min.js'></script>
+<script type='text/javascript' src='frontend/js/plugins/magnific-popup/magnific.min.js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/kleo/assets/js/plugins/carouFredSel/jquery.carouFredSel-6.2.0-packed7793.js?ver=2.4'></script>
+<script type='text/javascript' src='../../../wp-content/themes/kleo/assets/js/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min7793.js?ver=2.4'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/js_composer/assets/lib/isotope/dist/isotope.pkgd.min7035.js?ver=4.3.4'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var kleoFramework = {"ajaxurl":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-admin\/admin-ajax.php","themeUrl":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/themes\/kleo","goTop":"1","ajaxSearch":"1","alreadyLiked":"You already like this","logo":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/themes\/kleo\/assets\/img\/logo_black_teal.png","retinaLogo":"http:\/\/seventhqueen.com\/themes\/kleo\/wp-content\/uploads\/2014\/08\/logo_black_teal@2x.png","headerHeight":"88","loadingmessage":"<i class=\"icon icon-spin5 animate-spin\"><\/i> Sending info, please wait...","bpNotificationsRefresh":"0"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='frontend/js/app.min1.js'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/buddypress-media/lib/touchswipe/jquery.touchSwipe.min1cd1.js?ver=3.7.27'></script>
+
+<div id="sitewide-notice" class="admin-bar-off"></div>
 </body>
-
-<!-- Mirrored from seventhqueen.com/themes/kleo/members/demo/profile/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Feb 2015 11:20:08 GMT -->
 </html>
-<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
-
- Served from: seventhqueen.com @ 2015-02-20 11:15:12 by W3 Total Cache -->
