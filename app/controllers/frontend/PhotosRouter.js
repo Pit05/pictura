@@ -82,10 +82,7 @@ module.exports = function(app) {
             //user_id:"54e4c519edf460b009622a20"
         }
         commentaireDao.findAll(data,function(cb1){
-            PhotosDao.findById(req.params.id,function(cb2){
-
-               res.render("frontend/pages/photo",{infocommentaire:cb1,infophoto:cb2});
-            });
+            res.render("frontend/pages/photo");
         });
 
         /*PhotosDao.findImage({},function(cb){

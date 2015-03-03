@@ -55,6 +55,7 @@ require('./app/controllers/frontend/accueilRooter.js')(app);
 require('./app/controllers/ConnectionRouter.js')(app);
 //require('./app/HomeRouter.js')(app);
 require('./app/controllers/LoginRouter.js')(app);
+require('./app/controllers/WebService/service')(app);
 require('./app/controllers/frontend/PhotosRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);
@@ -125,9 +126,14 @@ io.on('connection', function (socket) {
 });
 
 //https://cdn.socket.io/socket.io-1.2.0.js
-http.listen(3000, function(){
-    console.log('listening on *:3000');
+port = process.env.PORT || 3000;
+
+http.listen(port, function() {
+    console.log("Listening on " + port);
 });
+/*http.listen(3000, function(){
+    console.log('listening on *:3000');
+});*/
 
 
 
