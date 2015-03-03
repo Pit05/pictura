@@ -114,10 +114,11 @@ io.on('connection', function (socket) {
 });
 
 //https://cdn.socket.io/socket.io-1.2.0.js
-port = process.env.PORT || 3000;
+app.set('port', (process.env.PORT || 5000));
+//port = process.env.PORT || 3000;
 
-http.listen(port, function() {
-    console.log("Listening on " + port);
+app.listen(app.get('port'), function() {
+    console.log("Node app is running at localhost:" + app.get('port'));
 });
 /*http.listen(3000, function(){
     console.log('listening on *:3000');
