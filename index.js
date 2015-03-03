@@ -2,6 +2,7 @@ var  express=require('express');
 
 //var ejs = require('ejs');
 var app = require('express')();
+var done=false;
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var mongo = require('mongodb');
@@ -15,7 +16,18 @@ app.set('view engine', 'ejs');
 //  besoin  pour  posting
 var bodyParser = require('body-parser');
 var multer = require('multer');
-
+app.use(multer({ dest: './public/frontend/img',
+    rename: function (fieldname, filename) {
+        return filename+Date.now();
+    },
+    onFileUploadStart: function (file) {
+        console.log(file.originalname + ' is starting ...')
+    },
+    onFileUploadComplete: function (file) {
+        console.log(file.fieldname + ' uploaded to  ' + file.path)
+        done=true;
+    }
+}));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(multer());

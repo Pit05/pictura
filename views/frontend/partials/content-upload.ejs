@@ -8,22 +8,39 @@
         <h3>Charger votre photo à publier</h3>
 
 
-        <form name="bpcp_change" id="bpcp_change" method="post" class="standard-form" enctype="multipart/form-data">
+        <form action="/ajoutPhoto" name="bpcp_change" id="bpcp_change" method="post" class="standard-form" enctype="multipart/form-data">
 
-            <div id="bg-delete-wrapper">
+            <div id="bg-delete-wrapper" style="display: none;">
 
                 <div class="current-cover">
-                    <img src="http://seventhqueen.com/themes/kleo/wp-content/uploads/2015/03/FIFA15_Titel.jpg" alt="current cover photo"/>
+                    <img  id="image_selection" src="http://seventhqueen.com/themes/kleo/wp-content/uploads/2015/03/FIFA15_Titel.jpg" alt="current cover photo"/>
                 </div>
                 <br>
-                <a href='#' id='bpcp-del-image' data-buid="35231" class='btn btn-default btn-xs'>Supprimer</a>
+               <!-- <a href='#' id='bpcp-del-image' data-buid="35231" class='btn btn-default btn-xs'>Supprimer</a>-->
             </div>
-
-            <p>If you want to change your profile cover, please upload a new image.</p>
             <label for="bpcp_upload">
-                <input type="file" name="file" id="bpcp_upload" class="settings-input"/>
+                <input type="file" onchange="imageChange();"  name="file" id="bpcp_upload" class="settings-input"/>
             </label>
+            <input type="text" name="titre" placeholder="Titre" required/>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <script>
+                function imageChange(){
 
+                    var input=document.getElementById("bpcp_upload");
+                    var reader = new FileReader();
+
+                    // Closure to capture the file information.
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                            document.getElementById("image_selection").src=e.target.result;
+                            document.getElementById("bg-delete-wrapper").style.display="block";
+                        };
+                    })(input.files[0]);
+
+                    // Read in the image file as a data URL.
+                    reader.readAsDataURL(input.files[0]);
+                }
+            </script>
             <br/>
             <br/>
 
