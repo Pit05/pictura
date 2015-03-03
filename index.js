@@ -43,6 +43,7 @@ require('./app/controllers/frontend/accueilRooter.js')(app);
 require('./app/controllers/ConnectionRouter.js')(app);
 require('./app/HomeRouter.js')(app);
 require('./app/controllers/LoginRouter.js')(app);
+require('./app/controllers/WebService/service')(app);
 require('./app/controllers/frontend/PhotosRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);

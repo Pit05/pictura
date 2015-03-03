@@ -118,7 +118,7 @@ db.Vote.insert(
 );
 db.createCollection("Photos",{autoIndexId:true});
   db.Photos.insert(
-  {"title":"moi et lui", "description":"","date_publi":new Date('2015-02-12'),"vote":3,"image_url":"",
+  {"title":"vous", "description":"","date_publi":new Date('2015-03-03'),"vote":3,"image_url":"",
       "user_id":"54e1fae4712ad4d4f7f9e1bc",
       "theme_id":"54ddd132e438abc33d8cfca4"
   }

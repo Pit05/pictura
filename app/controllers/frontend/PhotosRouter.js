@@ -6,6 +6,7 @@ var  PhotosDao=require('../../dao/PhotosDao');
 var  commentaireDao=require('../../dao/CommentaireDao');
 var  voteDao=require('../../dao/VoteDao');
 var commentaire=require('../../models/Commentaires');
+var moment = require("moment");
 ObjectID = require('mongodb').ObjectID;
 var objectId = new ObjectID();
 module.exports = function(app) {
@@ -38,7 +39,7 @@ module.exports = function(app) {
 
         })
     });
-    app.get('/Photo/:id', function (req, res) {
+    app.get('/PhotoInfo/:id', function (req, res) {
 
         var data={
             photos_id:req.params.id
@@ -51,6 +52,27 @@ module.exports = function(app) {
         /*PhotosDao.findImage({},function(cb){
             console.dir(cb);
         })*/
+    });
+    app.get('/Photo/AjoutCommentaire', function (req, res) {
+        var now =moment(new Date());
+
+
+        var data={
+            _id:objectId,
+            photos_id:"54e4c519edf460b009622a20",
+            user_id:"54e2c53fc7f66d935365da70",
+            message:"reveko elisany e",
+            date:new Date(now.format("YYYY-MM-DD"))
+            //user_id:"54e4c519edf460b009622a20"
+        }
+        commentaireDao.save(data,function(err,cb1){
+            if(err) return console.error( err);
+            console.dir(cb1);
+        });
+
+        /*PhotosDao.findImage({},function(cb){
+         console.dir(cb);
+         })*/
     });
 
 }
