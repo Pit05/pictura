@@ -18,7 +18,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 app.use(multer({ dest: './public/frontend/img',
     rename: function (fieldname, filename) {
-        return filename+Date.now();
+        return filename;
     },
     onFileUploadStart: function (file) {
         console.log(file.originalname + ' is starting ...')
@@ -34,8 +34,8 @@ app.use(multer());
 app.use(session({
     cookieName: 'session',
     secret: 'random_string_goes_here',
-    duration: 30 * 60 * 1000,
-    activeDuration: 5 * 60 * 1000
+    duration: 24*30 * 60 * 1000,
+    activeDuration:24* 30 * 60 * 1000
 }));
 
 

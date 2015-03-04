@@ -22,18 +22,21 @@ module.exports = function(app) {
         }
 
         voteDao.save(data,function(cb){
-                if(cb) console.dir(cb);
+                if(cb) {
+                    console.dir(cb);
+                    res.end("erreur");
+                }
                 else {
                         var dataUp={
                             $inc:{vote:1}
                         }
-                        console.dir("fdfdf");
+
                         PhotosDao.update({_id:"54e4c519edf460b009622a20"},dataUp,function(imageUp){
-                                            console.dir(imageUp);
+
 
                             UsersDao.testChangeBadge(imageUp,function(callb){
-                                req.json(callb);
-
+                                res.end("reussit");
+                                res.json(callb);
                             });
                         });
                 }
@@ -42,15 +45,17 @@ module.exports = function(app) {
     });
     app.post('/Photo/AjoutCommentaire', function (req, res) {
         var now =moment(new Date());
-         var data={
-             _id:objectId,
-             photos_id:req.body.photo,
-             user_id:req.session.user.user_id,
-             message:req.body.commentaire,
-             date:new Date(now.format("YYYY-MM-DD"))
-         }
+         var data= {
+             _id: objectId,
+             photos_id:new ObjectID(req.body.photo),
+             user_id: req.session.user._id,
+             commentaire: req.body.commentaire,
+             date: new Date(now.format("YYYY-MM-DD"))
+         };
         commentaireDao.save(data,function(err,cb1){
-            if(err) return console.error( err); console.dir(cb1);
+           // if(err) return console.error( err);
+            console.dir(cb1);
+            res.redirect("/Photo/"+req.body.photo);
         });
     });
     app.post('/ajoutPhoto', function (req, res) {
@@ -58,7 +63,7 @@ module.exports = function(app) {
         var data={
             _id: objectId,
             title: req.body.titre,
-            user_id: req.session.user_id,
+            user_id: req.session.user._id,
             image_url: req.files.file.originalname,//url de l'image
             description:req.body.description,
             date:new Date(now.format("YYYY-MM-DD")),
@@ -68,8 +73,8 @@ module.exports = function(app) {
         ThemeService.getThemeCourant(function(th){
 
             data.theme_id=th._id;
+
             PhotosDao.save(data,function(cb){
-                console.dir(cb);
                 res.redirect("/Upload");
             });
         });
@@ -83,7 +88,7 @@ module.exports = function(app) {
         }
         commentaireDao.findAll(data,function(cb1){
             PhotosDao.findById(req.params.id,function(cb2){
-
+                console.dir(cb2);
                res.render("frontend/pages/photo",{infocommentaire:cb1,infophoto:cb2});
             });
         });

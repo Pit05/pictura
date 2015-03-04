@@ -21,14 +21,15 @@
                 // On désire recevoir du HTML
 
                 success : function(code_html, statut){ // code_html contient le HTML renvoyé
-                    alert("vita");
-                    htmlbalise.innerHTML=parseInt(htmlbalise.innerHTML)+1;
+                    if(code_html=="erreur")return;
+
                 },
                 error : function(resultat, statut, erreur){
                     alert(erreur);
                 }
 
             });
+            htmlbalise.innerHTML=parseInt(htmlbalise.innerHTML)+1;
             return false;
         }
     </script>
@@ -154,7 +155,7 @@
                                                         <article id="post" class="post post type-post status-publish format-image has-post-thumbnail hentry category-uncategorized post-item">
                                                             <div class="post-content animated animate-when-almost-visible el-appear">
 
-                                                                <div class="post-image"><a href="/Photo/<%=todo._id.toString()%>" class="element-wrap"><img src="<%=todo.image_url%>"><span class="hover-element"><i>+</i></span></a></div><!--end post-image-->
+                                                                <div class="post-image"><a href="/Photo/<%=todo._id.toString()%>" class="element-wrap"><img src="../frontend/img/<%=todo.image_url%>"><span class="hover-element"><i>+</i></span></a></div><!--end post-image-->
 
                                                                 <div class="post-header">
 

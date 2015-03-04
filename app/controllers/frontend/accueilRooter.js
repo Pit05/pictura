@@ -73,6 +73,7 @@ module.exports = function(app) {
         }
         PhotosDao.findAll(function(cb1){
             ThemeService.getThemeCourant(function(th){
+                //console.dir(cb1);
                 res.render('frontend/pages/accueil',{data:cb1,theme:th.titre,isconnecter:isconnecter,utilisateur:req.session.user});
             });
 
