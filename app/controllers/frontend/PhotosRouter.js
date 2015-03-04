@@ -10,9 +10,10 @@ var moment=require('moment');
 ObjectID = require('mongodb').ObjectID;
 var objectId = new ObjectID();
 module.exports = function(app) {
-    app.get('/Login/Membre', function (req, res) {
-
+    app.get('/galery', function (req, res) {
+        res.render("frontend/pages/galery");
     });
+
     app.get('/Photo/Vote/:id', function (req, res) {
         var data={
             _id:objectId,
