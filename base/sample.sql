@@ -80,6 +80,13 @@ db.Theme.insert(
     "date_fin":new Date('2015-06-28')
     }
 );
+db.Theme.insert(
+    {
+    "typetheme":{"title":"Noel ","description":"La Fête chrétienne","avis":0,"image_url":""},
+    "date_debut":new Date('2015-03-02'),
+    "date_fin":new Date('2015-03-09')
+    }
+);
 
 
 
@@ -118,9 +125,9 @@ db.Vote.insert(
 );
 db.createCollection("Photos",{autoIndexId:true});
   db.Photos.insert(
-  {"title":"vous", "description":"","date_publi":new Date('2015-03-03'),"vote":3,"image_url":"",
+  {"title":"En mode noel", "description":"","date_publi":new Date('2015-03-04'),"vote":0,"image_url":"images/2.jpg",
       "user_id":"54e1fae4712ad4d4f7f9e1bc",
-      "theme_id":"54ddd132e438abc33d8cfca4"
+      "theme_id":"54f67dd9e5d495a0385969ba"
   }
  );
 db.createCollection("Commentaires",{autoIndexId:true});
