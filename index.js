@@ -2,6 +2,7 @@ var  express=require('express');
 
 //var ejs = require('ejs');
 var app = require('express')();
+var done=false;
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var mongo = require('mongodb');
@@ -15,15 +16,26 @@ app.set('view engine', 'ejs');
 //  besoin  pour  posting
 var bodyParser = require('body-parser');
 var multer = require('multer');
-
+app.use(multer({ dest: './public/frontend/img',
+    rename: function (fieldname, filename) {
+        return filename;
+    },
+    onFileUploadStart: function (file) {
+        console.log(file.originalname + ' is starting ...')
+    },
+    onFileUploadComplete: function (file) {
+        console.log(file.fieldname + ' uploaded to  ' + file.path)
+        done=true;
+    }
+}));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(multer());
 app.use(session({
     cookieName: 'session',
     secret: 'random_string_goes_here',
-    duration: 30 * 60 * 1000,
-    activeDuration: 5 * 60 * 1000
+    duration: 24*30 * 60 * 1000,
+    activeDuration:24* 30 * 60 * 1000
 }));
 
 
@@ -43,6 +55,7 @@ require('./app/controllers/frontend/accueilRooter.js')(app);
 require('./app/controllers/ConnectionRouter.js')(app);
 //require('./app/HomeRouter.js')(app);
 require('./app/controllers/LoginRouter.js')(app);
+require('./app/controllers/WebService/service')(app);
 require('./app/controllers/frontend/PhotosRouter.js')(app);
 require('./app/controllers/backEnd/HomeBackEnd.js')(app);
 require('./app/controllers/backEnd/BadgeRouter.js')(app);
@@ -113,9 +126,15 @@ io.on('connection', function (socket) {
 });
 
 //https://cdn.socket.io/socket.io-1.2.0.js
-http.listen(3000, function(){
-    console.log('listening on *:3000');
+app.set('port', (process.env.PORT || 5000));
+//port = process.env.PORT || 3000;
+
+app.listen(app.get('port'), function() {
+    console.log("Node app is running at localhost:" + app.get('port'));
 });
+/*http.listen(3000, function(){
+    console.log('listening on *:3000');
+});*/
 
 
 
